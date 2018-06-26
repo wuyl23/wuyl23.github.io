@@ -170,6 +170,8 @@
                     <nav class="header-menu">
                         <ul>
                         
+                            <li><a  href="/">首页</a></li>
+                        
                             <li><a  href="/archives/">所有文章</a></li>
                         
                             <li><a  href="/about/">关于我</a></li>
@@ -242,6 +244,8 @@
             
             <nav class="header-menu">
                 <ul>
+                
+                    <li><a href="/">首页</a></li>
                 
                     <li><a href="/archives/">所有文章</a></li>
                 
@@ -651,6 +655,130 @@ sudo mv composer.phar /usr/local/bin/composer
 
 
   
+    <article id="post-linux_basic" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2017/03/10/linux_basic/" class="article-date">
+      <time datetime="2017-03-10T02:13:59.000Z" itemprop="datePublished">2017-03-10</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2017/03/10/linux_basic/">linux_basic</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h1 id="linux基础命令"><a href="#linux基础命令" class="headerlink" title="linux基础命令"></a>linux基础命令</h1><h4 id="常用指令"><a href="#常用指令" class="headerlink" title="常用指令"></a>常用指令</h4><pre><code>ls            显示文件或目录   
+    -l        列出文件详细信息l(list)
+    -a        列出当前目录下所有文件及目录，包括隐藏的a(all)
+mkdir         创建目录
+    -p        创建目录，若无父目录，则创建p(parent)
+cd            切换目录
+touch         创建空文件
+echo          创建带有内容的文件
+cat           查看文件内容
+cp            拷贝
+mv            移动或重命名
+rm            删除文件
+    -r        递归删除，可删除子目录及文件
+    -f        强制删除
+find          在文件系统中搜索某个文件
+wc            统计文本中行数、字数、字符数
+grep          在文本文件中查找某个字符
+rmdir         删除空目录
+tree          树形结构显示目录，需要安装tree包
+pwd           显示当前目录
+ln            创建链接文件
+more、less    分页显示文本文件内容
+head、tail    显示文件头、尾内容
+ctrl+c        终止命令
+</code></pre><h4 id="系统管理命令"><a href="#系统管理命令" class="headerlink" title="系统管理命令"></a>系统管理命令</h4><pre><code>stat          显示指定文件的详细信息，比ls更详细
+who           显示在线登陆用户
+whoami        显示当前操作用户
+hostname      显示主机名
+uname         显示系统信息
+top           动态显示当前耗费资源最多的进程信息
+ps            显示瞬间进程状态ps -aux
+du            查看目录大小 du -h /home带有单位显示目录信息
+df            查看磁盘大小 df -h 带有单位显示磁盘信息
+ifconfig      查看网络情况
+ping          测试网络连通
+netstat       显示网络状态信息
+man           命令不会用了，找男人  如：man ls
+clear         清屏
+alias         重命名 如：alias showmeit=&quot;ps -aux&quot; ，另外解除使用unaliax showmeit
+kill          杀死进程，可以先用ps 或 top命令查看进程的id，然后再用kill命令杀死进程
+</code></pre><h4 id="打包压缩相关命令"><a href="#打包压缩相关命令" class="headerlink" title="打包压缩相关命令"></a>打包压缩相关命令</h4><pre><code>tar:          打包压缩
+    -c        归档文件
+    -x        压缩文件
+    -z        gzip压缩文件
+    -j        bzip2压缩文件
+    -v        显示压缩或解压缩过程 v(view)
+    -f        使用档名
+例：
+tar -cvf /home/abc.tar /home/abc            只打包，不压缩
+tar -zcvf /home/abc.tar.gz /home/abc        打包，并用gzip压缩
+tar -jcvf /home/abc.tar.bz2 /home/abc       打包，并用bzip2压缩
+当然，如果想解压缩，就直接替换上面的命令  tar -cvf  / tar -zcvf  / tar -jcvf 中的“c”换成“x”就可以了
+</code></pre><h4 id="关机-重启机器"><a href="#关机-重启机器" class="headerlink" title="关机/重启机器"></a>关机/重启机器</h4><pre><code>shutdown
+    -r        关机重启
+    -h        关机不重启
+    now       立刻关机
+halt          关机
+reboot        重启
+</code></pre><h4 id="vim使用"><a href="#vim使用" class="headerlink" title="vim使用"></a>vim使用</h4><pre><code>：q           退出
+：q!          强制退出
+：wq          保存并退出
+</code></pre><h4 id="远程下载"><a href="#远程下载" class="headerlink" title="远程下载"></a>远程下载</h4><pre><code>wget http://XXXXXXX
+curl -O http://XXXXXXX
+</code></pre>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ubuntu/">ubuntu</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
     <article id="post-sql" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
@@ -813,130 +941,6 @@ git branch -a
       
     <div class="article-tag tagcloud">
         <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/git/">git</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-linux_basic" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a  href="/2017/03/10/linux_basic/" class="article-date">
-      <time datetime="2017-03-10T02:13:59.000Z" itemprop="datePublished">2017-03-10</time>
-</a>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a  class="article-title" href="/2017/03/10/linux_basic/">linux_basic</a>
-    </h1>
-  
-
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <h1 id="linux基础命令"><a href="#linux基础命令" class="headerlink" title="linux基础命令"></a>linux基础命令</h1><h4 id="常用指令"><a href="#常用指令" class="headerlink" title="常用指令"></a>常用指令</h4><pre><code>ls            显示文件或目录   
-    -l        列出文件详细信息l(list)
-    -a        列出当前目录下所有文件及目录，包括隐藏的a(all)
-mkdir         创建目录
-    -p        创建目录，若无父目录，则创建p(parent)
-cd            切换目录
-touch         创建空文件
-echo          创建带有内容的文件
-cat           查看文件内容
-cp            拷贝
-mv            移动或重命名
-rm            删除文件
-    -r        递归删除，可删除子目录及文件
-    -f        强制删除
-find          在文件系统中搜索某个文件
-wc            统计文本中行数、字数、字符数
-grep          在文本文件中查找某个字符
-rmdir         删除空目录
-tree          树形结构显示目录，需要安装tree包
-pwd           显示当前目录
-ln            创建链接文件
-more、less    分页显示文本文件内容
-head、tail    显示文件头、尾内容
-ctrl+c        终止命令
-</code></pre><h4 id="系统管理命令"><a href="#系统管理命令" class="headerlink" title="系统管理命令"></a>系统管理命令</h4><pre><code>stat          显示指定文件的详细信息，比ls更详细
-who           显示在线登陆用户
-whoami        显示当前操作用户
-hostname      显示主机名
-uname         显示系统信息
-top           动态显示当前耗费资源最多的进程信息
-ps            显示瞬间进程状态ps -aux
-du            查看目录大小 du -h /home带有单位显示目录信息
-df            查看磁盘大小 df -h 带有单位显示磁盘信息
-ifconfig      查看网络情况
-ping          测试网络连通
-netstat       显示网络状态信息
-man           命令不会用了，找男人  如：man ls
-clear         清屏
-alias         重命名 如：alias showmeit=&quot;ps -aux&quot; ，另外解除使用unaliax showmeit
-kill          杀死进程，可以先用ps 或 top命令查看进程的id，然后再用kill命令杀死进程
-</code></pre><h4 id="打包压缩相关命令"><a href="#打包压缩相关命令" class="headerlink" title="打包压缩相关命令"></a>打包压缩相关命令</h4><pre><code>tar:          打包压缩
-    -c        归档文件
-    -x        压缩文件
-    -z        gzip压缩文件
-    -j        bzip2压缩文件
-    -v        显示压缩或解压缩过程 v(view)
-    -f        使用档名
-例：
-tar -cvf /home/abc.tar /home/abc            只打包，不压缩
-tar -zcvf /home/abc.tar.gz /home/abc        打包，并用gzip压缩
-tar -jcvf /home/abc.tar.bz2 /home/abc       打包，并用bzip2压缩
-当然，如果想解压缩，就直接替换上面的命令  tar -cvf  / tar -zcvf  / tar -jcvf 中的“c”换成“x”就可以了
-</code></pre><h4 id="关机-重启机器"><a href="#关机-重启机器" class="headerlink" title="关机/重启机器"></a>关机/重启机器</h4><pre><code>shutdown
-    -r        关机重启
-    -h        关机不重启
-    now       立刻关机
-halt          关机
-reboot        重启
-</code></pre><h4 id="vim使用"><a href="#vim使用" class="headerlink" title="vim使用"></a>vim使用</h4><pre><code>：q           退出
-：q!          强制退出
-：wq          保存并退出
-</code></pre><h4 id="远程下载"><a href="#远程下载" class="headerlink" title="远程下载"></a>远程下载</h4><pre><code>wget http://XXXXXXX
-curl -O http://XXXXXXX
-</code></pre>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ubuntu/">ubuntu</a></li></ul>
     </div>
 
       
