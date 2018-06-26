@@ -7,19 +7,20 @@
   
   
   
-  <title>Hello World | phper</title>
+  <title>LAMP 环境搭建 | phper</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Welcome to my blog,how to use hexo?. Quick StartCreate a new post1$ hexo new &quot;My New Post&quot; More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info">
+  <meta name="description" content="安装之前可以更新一下ubuntu软件源，确认linux处于联网状态12$ sudo vi /etc/apt/source.list  //输入提供软件的地址（里面有默认的地址可以用）保存退出。$ sudo apt-get update 开始安装1、安装nginx，并启动12$ sudo apt-get install nginx$ sudo /etc/init.d/nginx start （或者">
+<meta name="keywords" content="ubuntu">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://yoursite.com/2018/06/25/hello-world/index.html">
+<meta property="og:title" content="LAMP 环境搭建">
+<meta property="og:url" content="http://yoursite.com/2017/03/10/LAMP-环境搭建/index.html">
 <meta property="og:site_name" content="phper">
-<meta property="og:description" content="Welcome to my blog,how to use hexo?. Quick StartCreate a new post1$ hexo new &quot;My New Post&quot; More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info">
+<meta property="og:description" content="安装之前可以更新一下ubuntu软件源，确认linux处于联网状态12$ sudo vi /etc/apt/source.list  //输入提供软件的地址（里面有默认的地址可以用）保存退出。$ sudo apt-get update 开始安装1、安装nginx，并启动12$ sudo apt-get install nginx$ sudo /etc/init.d/nginx start （或者">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2017-03-10T09:10:36.000Z">
+<meta property="og:updated_time" content="2017-03-13T07:57:17.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello World">
-<meta name="twitter:description" content="Welcome to my blog,how to use hexo?. Quick StartCreate a new post1$ hexo new &quot;My New Post&quot; More info: Writing Run server1$ hexo server More info: Server Generate static files1$ hexo generate More info">
+<meta name="twitter:title" content="LAMP 环境搭建">
+<meta name="twitter:description" content="安装之前可以更新一下ubuntu软件源，确认linux处于联网状态12$ sudo vi /etc/apt/source.list  //输入提供软件的地址（里面有默认的地址可以用）保存退出。$ sudo apt-get update 开始安装1、安装nginx，并启动12$ sudo apt-get install nginx$ sudo /etc/init.d/nginx start （或者">
   
     <link rel="alternative" href="/atom.xml" title="phper" type="application/atom+xml">
   
@@ -272,11 +273,11 @@
         </header>
     </div>
 </nav>
-      <div class="body-wrap"><article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-LAMP-环境搭建" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a  href="/2018/06/25/hello-world/" class="article-date">
-      <time datetime="2018-06-25T08:12:50.560Z" itemprop="datePublished">2018-06-25</time>
+      <a  href="/2017/03/10/LAMP-环境搭建/" class="article-date">
+      <time datetime="2017-03-10T07:50:23.000Z" itemprop="datePublished">2017-03-10</time>
 </a>
 
     </div>
@@ -290,7 +291,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      Hello World
+      LAMP 环境搭建
     </h1>
   
 
@@ -301,6 +302,10 @@
         
 
         
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ubuntu/">ubuntu</a></li></ul>
+    </div>
+
         <div class="clearfix"></div>
       </div>
       
@@ -308,15 +313,36 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p>Welcome to my blog,how to use hexo?.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+        <h4 id="安装之前可以更新一下ubuntu软件源，确认linux处于联网状态"><a href="#安装之前可以更新一下ubuntu软件源，确认linux处于联网状态" class="headerlink" title="安装之前可以更新一下ubuntu软件源，确认linux处于联网状态"></a>安装之前可以更新一下ubuntu软件源，确认linux处于联网状态</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ sudo vi /etc/apt/source.list  //输入提供软件的地址（里面有默认的地址可以用）保存退出。</span><br><span class="line">$ sudo apt-get update</span><br></pre></td></tr></table></figure>
+<h3 id="开始安装"><a href="#开始安装" class="headerlink" title="开始安装"></a>开始安装</h3><h4 id="1、安装nginx，并启动"><a href="#1、安装nginx，并启动" class="headerlink" title="1、安装nginx，并启动"></a>1、安装nginx，并启动</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt-get install nginx</span><br><span class="line">$ sudo /etc/init.d/nginx start （或者 service nginx start）</span><br></pre></td></tr></table></figure>
+<h4 id="2、安装PHP和MySql"><a href="#2、安装PHP和MySql" class="headerlink" title="2、安装PHP和MySql"></a>2、安装PHP和MySql</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt-get install php5-cli php5-cgi mysql-server php5-mysql</span><br><span class="line">//更改数据库用户权限</span><br><span class="line">$ grant all on *.* to root@<span class="string">'%'</span> identified by <span class="string">'123456'</span></span><br><span class="line">// 刷新让权限生效</span><br><span class="line">$ flush privileges</span><br><span class="line">//修改mysql配置文件 将<span class="built_in">bind</span>-address = 127.0.0.1 注释掉，就可以远程连接数据库了</span><br><span class="line">$ sudo vi /etc/mysql/my.cnf</span><br></pre></td></tr></table></figure>
+<h4 id="3、安装php5-fpm"><a href="#3、安装php5-fpm" class="headerlink" title="3、安装php5-fpm"></a>3、安装php5-fpm</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt-get install php5-fpm</span><br></pre></td></tr></table></figure>
+<h4 id="4、配置nginx并重启服务"><a href="#4、配置nginx并重启服务" class="headerlink" title="4、配置nginx并重启服务"></a>4、配置nginx并重启服务</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">$ sudo vi /etc/nginx/sites-enabled，修改如下：</span><br><span class="line"></span><br><span class="line">      server&#123;</span><br><span class="line">          listen 80;</span><br><span class="line">          root /var/www;</span><br><span class="line">          index index.php index.html index.htm;</span><br><span class="line">          server_name localhost;</span><br><span class="line">          location / &#123;</span><br><span class="line">              try_files <span class="variable">$uri</span> <span class="variable">$uri</span>/ /index.html;</span><br><span class="line">          &#125;</span><br><span class="line">          location ~ \.php$ &#123;</span><br><span class="line">              fastcgi_pass 127.0.0.1:9000;</span><br><span class="line">              fastcgi_index index.php;</span><br><span class="line">              fastcgi_param SCRIPT_FILENAME /var/www<span class="variable">$fastcgi_script_name</span>;</span><br><span class="line">              include /etc/nginx/fastcgi_params;</span><br><span class="line">          &#125;</span><br><span class="line">      &#125;</span><br><span class="line">      保存退出</span><br></pre></td></tr></table></figure>
+<h4 id="5、启动fastcgi-php"><a href="#5、启动fastcgi-php" class="headerlink" title="5、启动fastcgi php"></a>5、启动fastcgi php</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo service php5-fpm start</span><br></pre></td></tr></table></figure>
+<h4 id="6、重启nginx服务"><a href="#6、重启nginx服务" class="headerlink" title="6、重启nginx服务"></a>6、重启nginx服务</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo service nginx restart</span><br></pre></td></tr></table></figure>
+<h4 id="7、安装PHP相关扩展"><a href="#7、安装PHP相关扩展" class="headerlink" title="7、安装PHP相关扩展"></a>7、安装PHP相关扩展</h4><p>如 xdebug 、memcache、 oauth等</p>
+<p>1)安装curl：sudo apt-get install php5-curl</p>
+<p>2)安装gettext：sudo apt-get install php-gettext</p>
+<p>3）安装gd库：sudo apt-get install php5-gd</p>
+<p>4）安装mcrypt：sudo apt-get install php5-mcrypt</p>
+<p>5）安装memcache</p>
+<pre><code>a)安装服务器 ：
+</code></pre><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">    sudo apt-get install memcached</span><br><span class="line">    $ memcached -d -m 50 -p 11211 -u root</span><br></pre></td></tr></table></figure>
+<pre><code>参数说明 -m 指定使用多少兆的缓存空间；-p 指定要监听的端口； -u 指定以哪个用户来运行
+
+b）安装php 模块：
+</code></pre><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">    sudo apt-get install php5-memcache</span><br></pre></td></tr></table></figure>
+<p>6）安装oauth：基于pecl的<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">    a）sudo apt-get install php5-dev php-pear libpcre3-dev</span><br><span class="line">       sudo pecl install oauth    (要确保有Linux系统里可以make)</span><br></pre></td></tr></table></figure></p>
+<pre><code>b）修改配置文件
+</code></pre><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">    sudo vi /etc/php5/fpm/php.ini</span><br></pre></td></tr></table></figure>
+<pre><code>在最后添加extension=oauth.so
+</code></pre><p>7）安装ssh2：sudo apt-get install libssh2-php</p>
+<p>8）安装xdebug：<br>    sudo apt-get install php5-xdebug</p>
+<pre><code>修改php的配置文件 sudo vi /etc/php5/fpm/php.ini 
+
+将display_errors和html_errors都改为On
+</code></pre><p>9)安装完上述扩展后重启PHP服务 ：sudo service php5-fpm restart</p>
+<p>现在整个环境就搭好了。</p>
 
       
     </div>
@@ -325,13 +351,13 @@
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a  href="/2018/06/25/hello-world/">Hello World</a></p>
+        <p><span>本文标题:</span><a  href="/2017/03/10/LAMP-环境搭建/">LAMP 环境搭建</a></p>
         <p><span>文章作者:</span><a  href="/" title="访问 angellwu 的个人博客">angellwu</a></p>
-        <p><span>发布时间:</span>2018年06月25日 - 16时12分</p>
-        <p><span>最后更新:</span>2017年03月10日 - 17时10分</p>
+        <p><span>发布时间:</span>2017年03月10日 - 15时50分</p>
+        <p><span>最后更新:</span>2017年03月13日 - 15时57分</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2018/06/25/hello-world/" title="Hello World">http://yoursite.com/2018/06/25/hello-world/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2018/06/25/hello-world/　　作者: angellwu" title=""></span>
+            <span>原始链接:</span><a class="post-url" href="/2017/03/10/LAMP-环境搭建/" title="LAMP 环境搭建">http://yoursite.com/2017/03/10/LAMP-环境搭建/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2017/03/10/LAMP-环境搭建/　　作者: angellwu" title=""></span>
         </p>
         <p>
             <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" title="中国大陆 (CC BY-NC-SA 3.0 CN)" target = "_blank">"署名-非商用-相同方式共享 3.0"</a> 转载请保留原文链接及作者。
@@ -342,9 +368,18 @@
 
 <nav id="article-nav">
   
+    <a  href="/2017/03/10/ubuntu-新手入门/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          ubuntu 新手入门
+        
+      </div>
+    </a>
   
-    <a  href="/2017/03/10/ubuntu-新手入门/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">ubuntu 新手入门</div>
+  
+    <a  href="/2017/03/10/ThinkPHP/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">ThinkPHP</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
@@ -356,7 +391,7 @@
 
     <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Quick-Start"><span class="toc-number">1.</span> <span class="toc-text">Quick Start</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Create-a-new-post"><span class="toc-number">1.1.</span> <span class="toc-text">Create a new post</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Run-server"><span class="toc-number">1.2.</span> <span class="toc-text">Run server</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Generate-static-files"><span class="toc-number">1.3.</span> <span class="toc-text">Generate static files</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Deploy-to-remote-sites"><span class="toc-number">1.4.</span> <span class="toc-text">Deploy to remote sites</span></a></li></ol></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-4"><a class="toc-link" href="#安装之前可以更新一下ubuntu软件源，确认linux处于联网状态"><span class="toc-number">1.</span> <span class="toc-text">安装之前可以更新一下ubuntu软件源，确认linux处于联网状态</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#开始安装"><span class="toc-number"></span> <span class="toc-text">开始安装</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#1、安装nginx，并启动"><span class="toc-number">1.</span> <span class="toc-text">1、安装nginx，并启动</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#2、安装PHP和MySql"><span class="toc-number">2.</span> <span class="toc-text">2、安装PHP和MySql</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#3、安装php5-fpm"><span class="toc-number">3.</span> <span class="toc-text">3、安装php5-fpm</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#4、配置nginx并重启服务"><span class="toc-number">4.</span> <span class="toc-text">4、配置nginx并重启服务</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#5、启动fastcgi-php"><span class="toc-number">5.</span> <span class="toc-text">5、启动fastcgi php</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#6、重启nginx服务"><span class="toc-number">6.</span> <span class="toc-text">6、重启nginx服务</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#7、安装PHP相关扩展"><span class="toc-number">7.</span> <span class="toc-text">7、安装PHP相关扩展</span></a></li></ol>
 </div>
 <style>
     .left-col .switch-btn {
@@ -429,11 +464,13 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a  href="/" title="回到主页"><i class="fa fa-home"></i></a>
+            <a  href="/2017/03/10/ubuntu-新手入门/" title="上一篇: ubuntu 新手入门">
+                <i class="fa fa-angle-left"></i>
+            </a>
         
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
         
-            <a  href="/2017/03/10/ubuntu-新手入门/" title="下一篇: ubuntu 新手入门">
+            <a  href="/2017/03/10/ThinkPHP/" title="下一篇: ThinkPHP">
                 <i class="fa fa-angle-right"></i>
             </a>
         
