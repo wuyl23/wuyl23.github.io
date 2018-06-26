@@ -655,130 +655,6 @@ sudo mv composer.phar /usr/local/bin/composer
 
 
   
-    <article id="post-linux_basic" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a  href="/2017/03/10/linux_basic/" class="article-date">
-      <time datetime="2017-03-10T02:13:59.000Z" itemprop="datePublished">2017-03-10</time>
-</a>
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a  class="article-title" href="/2017/03/10/linux_basic/">linux_basic</a>
-    </h1>
-  
-
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-        <h1 id="linux基础命令"><a href="#linux基础命令" class="headerlink" title="linux基础命令"></a>linux基础命令</h1><h4 id="常用指令"><a href="#常用指令" class="headerlink" title="常用指令"></a>常用指令</h4><pre><code>ls            显示文件或目录   
-    -l        列出文件详细信息l(list)
-    -a        列出当前目录下所有文件及目录，包括隐藏的a(all)
-mkdir         创建目录
-    -p        创建目录，若无父目录，则创建p(parent)
-cd            切换目录
-touch         创建空文件
-echo          创建带有内容的文件
-cat           查看文件内容
-cp            拷贝
-mv            移动或重命名
-rm            删除文件
-    -r        递归删除，可删除子目录及文件
-    -f        强制删除
-find          在文件系统中搜索某个文件
-wc            统计文本中行数、字数、字符数
-grep          在文本文件中查找某个字符
-rmdir         删除空目录
-tree          树形结构显示目录，需要安装tree包
-pwd           显示当前目录
-ln            创建链接文件
-more、less    分页显示文本文件内容
-head、tail    显示文件头、尾内容
-ctrl+c        终止命令
-</code></pre><h4 id="系统管理命令"><a href="#系统管理命令" class="headerlink" title="系统管理命令"></a>系统管理命令</h4><pre><code>stat          显示指定文件的详细信息，比ls更详细
-who           显示在线登陆用户
-whoami        显示当前操作用户
-hostname      显示主机名
-uname         显示系统信息
-top           动态显示当前耗费资源最多的进程信息
-ps            显示瞬间进程状态ps -aux
-du            查看目录大小 du -h /home带有单位显示目录信息
-df            查看磁盘大小 df -h 带有单位显示磁盘信息
-ifconfig      查看网络情况
-ping          测试网络连通
-netstat       显示网络状态信息
-man           命令不会用了，找男人  如：man ls
-clear         清屏
-alias         重命名 如：alias showmeit=&quot;ps -aux&quot; ，另外解除使用unaliax showmeit
-kill          杀死进程，可以先用ps 或 top命令查看进程的id，然后再用kill命令杀死进程
-</code></pre><h4 id="打包压缩相关命令"><a href="#打包压缩相关命令" class="headerlink" title="打包压缩相关命令"></a>打包压缩相关命令</h4><pre><code>tar:          打包压缩
-    -c        归档文件
-    -x        压缩文件
-    -z        gzip压缩文件
-    -j        bzip2压缩文件
-    -v        显示压缩或解压缩过程 v(view)
-    -f        使用档名
-例：
-tar -cvf /home/abc.tar /home/abc            只打包，不压缩
-tar -zcvf /home/abc.tar.gz /home/abc        打包，并用gzip压缩
-tar -jcvf /home/abc.tar.bz2 /home/abc       打包，并用bzip2压缩
-当然，如果想解压缩，就直接替换上面的命令  tar -cvf  / tar -zcvf  / tar -jcvf 中的“c”换成“x”就可以了
-</code></pre><h4 id="关机-重启机器"><a href="#关机-重启机器" class="headerlink" title="关机/重启机器"></a>关机/重启机器</h4><pre><code>shutdown
-    -r        关机重启
-    -h        关机不重启
-    now       立刻关机
-halt          关机
-reboot        重启
-</code></pre><h4 id="vim使用"><a href="#vim使用" class="headerlink" title="vim使用"></a>vim使用</h4><pre><code>：q           退出
-：q!          强制退出
-：wq          保存并退出
-</code></pre><h4 id="远程下载"><a href="#远程下载" class="headerlink" title="远程下载"></a>远程下载</h4><pre><code>wget http://XXXXXXX
-curl -O http://XXXXXXX
-</code></pre>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ubuntu/">ubuntu</a></li></ul>
-    </div>
-
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-
-
-  
     <article id="post-git" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
@@ -962,10 +838,10 @@ git branch -a
 
 
   
-    <article id="post-开启博客" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-linux_basic" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a  href="/2017/03/10/开启博客/" class="article-date">
+      <a  href="/2017/03/10/linux_basic/" class="article-date">
       <time datetime="2017-03-10T02:13:59.000Z" itemprop="datePublished">2017-03-10</time>
 </a>
 
@@ -980,7 +856,131 @@ git branch -a
         
   
     <h1 itemprop="name">
-      <a  class="article-title" href="/2017/03/10/开启博客/">开启博客</a>
+      <a  class="article-title" href="/2017/03/10/linux_basic/">linux_basic</a>
+    </h1>
+  
+
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h1 id="linux基础命令"><a href="#linux基础命令" class="headerlink" title="linux基础命令"></a>linux基础命令</h1><h4 id="常用指令"><a href="#常用指令" class="headerlink" title="常用指令"></a>常用指令</h4><pre><code>ls            显示文件或目录   
+    -l        列出文件详细信息l(list)
+    -a        列出当前目录下所有文件及目录，包括隐藏的a(all)
+mkdir         创建目录
+    -p        创建目录，若无父目录，则创建p(parent)
+cd            切换目录
+touch         创建空文件
+echo          创建带有内容的文件
+cat           查看文件内容
+cp            拷贝
+mv            移动或重命名
+rm            删除文件
+    -r        递归删除，可删除子目录及文件
+    -f        强制删除
+find          在文件系统中搜索某个文件
+wc            统计文本中行数、字数、字符数
+grep          在文本文件中查找某个字符
+rmdir         删除空目录
+tree          树形结构显示目录，需要安装tree包
+pwd           显示当前目录
+ln            创建链接文件
+more、less    分页显示文本文件内容
+head、tail    显示文件头、尾内容
+ctrl+c        终止命令
+</code></pre><h4 id="系统管理命令"><a href="#系统管理命令" class="headerlink" title="系统管理命令"></a>系统管理命令</h4><pre><code>stat          显示指定文件的详细信息，比ls更详细
+who           显示在线登陆用户
+whoami        显示当前操作用户
+hostname      显示主机名
+uname         显示系统信息
+top           动态显示当前耗费资源最多的进程信息
+ps            显示瞬间进程状态ps -aux
+du            查看目录大小 du -h /home带有单位显示目录信息
+df            查看磁盘大小 df -h 带有单位显示磁盘信息
+ifconfig      查看网络情况
+ping          测试网络连通
+netstat       显示网络状态信息
+man           命令不会用了，找男人  如：man ls
+clear         清屏
+alias         重命名 如：alias showmeit=&quot;ps -aux&quot; ，另外解除使用unaliax showmeit
+kill          杀死进程，可以先用ps 或 top命令查看进程的id，然后再用kill命令杀死进程
+</code></pre><h4 id="打包压缩相关命令"><a href="#打包压缩相关命令" class="headerlink" title="打包压缩相关命令"></a>打包压缩相关命令</h4><pre><code>tar:          打包压缩
+    -c        归档文件
+    -x        压缩文件
+    -z        gzip压缩文件
+    -j        bzip2压缩文件
+    -v        显示压缩或解压缩过程 v(view)
+    -f        使用档名
+例：
+tar -cvf /home/abc.tar /home/abc            只打包，不压缩
+tar -zcvf /home/abc.tar.gz /home/abc        打包，并用gzip压缩
+tar -jcvf /home/abc.tar.bz2 /home/abc       打包，并用bzip2压缩
+当然，如果想解压缩，就直接替换上面的命令  tar -cvf  / tar -zcvf  / tar -jcvf 中的“c”换成“x”就可以了
+</code></pre><h4 id="关机-重启机器"><a href="#关机-重启机器" class="headerlink" title="关机/重启机器"></a>关机/重启机器</h4><pre><code>shutdown
+    -r        关机重启
+    -h        关机不重启
+    now       立刻关机
+halt          关机
+reboot        重启
+</code></pre><h4 id="vim使用"><a href="#vim使用" class="headerlink" title="vim使用"></a>vim使用</h4><pre><code>：q           退出
+：q!          强制退出
+：wq          保存并退出
+</code></pre><h4 id="远程下载"><a href="#远程下载" class="headerlink" title="远程下载"></a>远程下载</h4><pre><code>wget http://XXXXXXX
+curl -O http://XXXXXXX
+</code></pre>
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ubuntu/">ubuntu</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
+
+
+  
+    <article id="post-starting_blog" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a  href="/2017/03/10/starting_blog/" class="article-date">
+      <time datetime="2017-03-10T02:13:59.000Z" itemprop="datePublished">2017-03-10</time>
+</a>
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a  class="article-title" href="/2017/03/10/starting_blog/">开启博客</a>
     </h1>
   
 
@@ -1002,7 +1002,7 @@ git branch -a
 <h3 id="2-完全卸载apache2"><a href="#2-完全卸载apache2" class="headerlink" title="2. 完全卸载apache2"></a>2. 完全卸载apache2</h3><h4 id="之前卸载重新安装后找不到apache2-conf配置文件，测试使用一下方式卸载后可用。"><a href="#之前卸载重新安装后找不到apache2-conf配置文件，测试使用一下方式卸载后可用。" class="headerlink" title="之前卸载重新安装后找不到apache2.conf配置文件，测试使用一下方式卸载后可用。"></a>之前卸载重新安装后找不到apache2.conf配置文件，测试使用一下方式卸载后可用。</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt-get --purge remove apache2</span><br><span class="line">$ sudo apt-get --purge remove apache2.2-common</span><br><span class="line">$ sudo apt-get autoremove</span><br></pre></td></tr></table></figure>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">// (关键一步）找到没有删除掉的配置文件，一并删除</span><br><span class="line">  $ sudo find /etc -name <span class="string">"*apache*"</span> -<span class="built_in">exec</span> rm -rf &#123;&#125; \;</span><br><span class="line">  $ sudo rm -rf /var/www</span><br></pre></td></tr></table></figure>
 <h2 id="解决电脑无声音"><a href="#解决电脑无声音" class="headerlink" title="解决电脑无声音"></a>解决电脑无声音</h2><h3 id="输入下面命令安装pavucontrol："><a href="#输入下面命令安装pavucontrol：" class="headerlink" title="输入下面命令安装pavucontrol："></a>输入下面命令安装pavucontrol：</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt install pavucontrol</span><br><span class="line">$ pavucontrol</span><br></pre></td></tr></table></figure>
-<h4 id="看下面的图片实例"><a href="#看下面的图片实例" class="headerlink" title="看下面的图片实例"></a>看下面的图片实例</h4><p><img src="img/1.jpg" alt="1">  <img src="img/2.png" alt="2"></p>
+<h4 id="看下面的图片实例"><a href="#看下面的图片实例" class="headerlink" title="看下面的图片实例"></a>看下面的图片实例</h4><p><img src="img/1.jpg" alt="1">   <img src="img/2.png" alt="2"></p>
 <h2 id="ubuntu-解决浏览器flash"><a href="#ubuntu-解决浏览器flash" class="headerlink" title="ubuntu 解决浏览器flash"></a>ubuntu 解决浏览器flash</h2><p>1.下载稳定版chrome浏览器<br>2.下载PepperFlash压缩包，解压<br>3.打开解压后的文件夹，将libpepflashplayer.so跟mainifest.json复制到 /opt/google/chrome/目录下的PepperFlash文件夹里，（PepperFlash文件夹自己创建）<br>4.进去usr/share/applications/目录下 右击Google Chrome 图标，选择Properties如图：</p>
 <p><img src="img/3.png" alt="3"></p>
 <p>5.在command：里添加–ppapi-flash-path=/opt/google/chrome/PepperFlash/libpepflashplayer.so （注意：前面必须有空隔，如果添加不成功，应该就是权限问题，因为必须要root权限，所以在命令行里修改这个软件的权限 chmod 777 Google Chrome后就可以添加成功）</p>
