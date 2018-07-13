@@ -8,20 +8,20 @@
   
   
   
-  <title>composer | angellwu-phper</title>
+  <title>PHP 接口 | angellwu-phper</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="ComposerComposer / Composer 中文  是 PHP 用来管理依赖（dependency）关系的工具。你可以在自己的项目中声明所依赖的外部工具库（libraries），Composer 会帮你安装这些依赖的库文件。  Installcurl -sS https://getcomposer.org/installer | php sudo mv composer.phar /u">
-<meta name="keywords" content="composer">
+  <meta name="description" content="PHP 接口修改绑定手机号1.发送短信验证码1234567891011121314151617181920212223242526272829303132333435public function send_mobile() &amp;#123;        $uid = I(&amp;apos;post.uid&amp;apos;);        $mobile = M(&amp;apos;user&amp;apos;)-&amp;gt;">
+<meta name="keywords" content="php">
 <meta property="og:type" content="article">
-<meta property="og:title" content="composer">
-<meta property="og:url" content="http://wuyl23.github.io/2017/03/10/composer/index.html">
+<meta property="og:title" content="PHP 接口">
+<meta property="og:url" content="http://wuyl23.github.io/2017/07/13/php-接口编写/index.html">
 <meta property="og:site_name" content="angellwu-phper">
-<meta property="og:description" content="ComposerComposer / Composer 中文  是 PHP 用来管理依赖（dependency）关系的工具。你可以在自己的项目中声明所依赖的外部工具库（libraries），Composer 会帮你安装这些依赖的库文件。  Installcurl -sS https://getcomposer.org/installer | php sudo mv composer.phar /u">
+<meta property="og:description" content="PHP 接口修改绑定手机号1.发送短信验证码1234567891011121314151617181920212223242526272829303132333435public function send_mobile() &amp;#123;        $uid = I(&amp;apos;post.uid&amp;apos;);        $mobile = M(&amp;apos;user&amp;apos;)-&amp;gt;">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2017-03-13T07:57:44.000Z">
+<meta property="og:updated_time" content="2018-07-13T01:48:22.252Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="composer">
-<meta name="twitter:description" content="ComposerComposer / Composer 中文  是 PHP 用来管理依赖（dependency）关系的工具。你可以在自己的项目中声明所依赖的外部工具库（libraries），Composer 会帮你安装这些依赖的库文件。  Installcurl -sS https://getcomposer.org/installer | php sudo mv composer.phar /u">
+<meta name="twitter:title" content="PHP 接口">
+<meta name="twitter:description" content="PHP 接口修改绑定手机号1.发送短信验证码1234567891011121314151617181920212223242526272829303132333435public function send_mobile() &amp;#123;        $uid = I(&amp;apos;post.uid&amp;apos;);        $mobile = M(&amp;apos;user&amp;apos;)-&amp;gt;">
   
     <link rel="alternative" href="/atom.xml" title="angellwu-phper" type="application/atom+xml">
   
@@ -270,11 +270,11 @@
         </header>
     </div>
 </nav>
-      <div class="body-wrap"><article id="post-composer" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-php-接口编写" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a  href="/2017/03/10/composer/" class="article-date">
-      <time datetime="2017-03-10T02:13:59.000Z" itemprop="datePublished">2017-03-10</time>
+      <a  href="/2017/07/13/php-接口编写/" class="article-date">
+      <time datetime="2017-07-13T02:59:11.000Z" itemprop="datePublished">2017-07-13</time>
 </a>
 
     </div>
@@ -288,7 +288,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      composer
+      PHP 接口
     </h1>
   
 
@@ -300,7 +300,7 @@
 
         
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/composer/">composer</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/php/">php</a></li></ul>
     </div>
 
         <div class="clearfix"></div>
@@ -310,16 +310,9 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <h1 id="Composer"><a href="#Composer" class="headerlink" title="Composer"></a>Composer</h1><p><a href="https://getcomposer.org/" target="_blank" rel="noopener">Composer</a> / <a href="https://getcomposer.org/" target="_blank" rel="noopener">Composer 中文</a>  是 PHP 用来管理依赖（dependency）关系的工具。你可以在自己的项目中声明所依赖的外部工具库（libraries），Composer 会帮你安装这些依赖的库文件。</p>
-<p><a href="https://packagist.org/" target="_blank" rel="noopener"></a></p>
-<h3 id="Install"><a href="#Install" class="headerlink" title="Install"></a>Install</h3><pre><code>curl -sS https://getcomposer.org/installer | php
-sudo mv composer.phar /usr/local/bin/composer
-</code></pre><h3 id="Packagist"><a href="#Packagist" class="headerlink" title="Packagist"></a>Packagist</h3><p><a href="https://packagist.org/" target="_blank" rel="noopener">Packagist</a> / <a href="http://pkg.phpcomposer.com/" target="_blank" rel="noopener">Packagist中国全量镜像</a></p>
-<p>系统全局配置</p>
-<pre><code>composer config -g repo.packagist composer https://packagist.phpcomposer.com
-</code></pre><p>单个项目配置</p>
-<pre><code>composer config repo.packagist composer https://packagist.phpcomposer.com
-</code></pre>
+        <h3 id="PHP-接口"><a href="#PHP-接口" class="headerlink" title="PHP 接口"></a>PHP 接口</h3><h4 id="修改绑定手机号"><a href="#修改绑定手机号" class="headerlink" title="修改绑定手机号"></a>修改绑定手机号</h4><h5 id="1-发送短信验证码"><a href="#1-发送短信验证码" class="headerlink" title="1.发送短信验证码"></a>1.发送短信验证码</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">public function send_mobile() &#123;</span><br><span class="line">        $uid = I(&apos;post.uid&apos;);</span><br><span class="line">        $mobile = M(&apos;user&apos;)-&gt;where(array(&apos;uid&apos;=&gt;$uid))-&gt;getField(&apos;mobile&apos;);//手机号;</span><br><span class="line">        $mobiles = &apos;00&apos; . substr(M(&apos;user&apos;)-&gt;where(array(&apos;uid&apos;=&gt;$uid))-&gt;getField(&apos;codes&apos;),0);//区号</span><br><span class="line">        //var_dump($mobiles);exit;</span><br><span class="line">        if(!$mobile)&#123;</span><br><span class="line">            $this-&gt;ajaxReturn(array(&apos;msg&apos; =&gt; &apos;请输入手机号&apos;, &apos;status&apos; =&gt; 3));</span><br><span class="line">        &#125;</span><br><span class="line">        if($mobiles = &apos;0086&apos;)&#123;</span><br><span class="line">           $user =  M(&apos;user&apos;)-&gt;where(array(&apos;mobile&apos;=&gt;$mobile))-&gt;find();</span><br><span class="line">        &#125;else&#123;</span><br><span class="line">           $user =  M(&apos;user&apos;)-&gt;where(array(&apos;mobile&apos;=&gt;$mobile,&apos;codes&apos;=&gt;$mobiles))-&gt;find();</span><br><span class="line">        &#125;</span><br><span class="line">        $code = rand(111111, 999999);</span><br><span class="line">        if ($mobiles == &quot;0086&quot;) &#123;</span><br><span class="line">            $Sms = new \Think\Sms();</span><br><span class="line">            $Sms = $Sms-&gt;send_verify($mobile, $code);</span><br><span class="line">        &#125; else &#123;</span><br><span class="line">            $Sms = new \Think\Smshw();</span><br><span class="line">            $Sms = $Sms-&gt;send_verify($mobiles . $mobile, $code);</span><br><span class="line">        &#125;</span><br><span class="line">        $sms_log = [</span><br><span class="line">            &apos;key&apos; =&gt; &apos;upd_&apos; . $mobile,</span><br><span class="line">            &apos;verify_code&apos; =&gt; $code,</span><br><span class="line">            &apos;end_time&apos; =&gt; time() + (15*60)</span><br><span class="line">        ];</span><br><span class="line">        M(&apos;code&apos;)-&gt;add($sms_log);</span><br><span class="line">        if ($Sms) &#123;</span><br><span class="line">            $this-&gt;ajaxReturn(array(&apos;msg&apos; =&gt; &apos;验证码已发送&apos;, &apos;status&apos; =&gt; 1));</span><br><span class="line"></span><br><span class="line">        &#125; else &#123;</span><br><span class="line">            $this-&gt;ajaxReturn(array(&apos;msg&apos; =&gt; &apos;验证码发送失败,请重试&apos;, &apos;status&apos; =&gt; 2));</span><br><span class="line"></span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+<h5 id="2-修改手机号"><a href="#2-修改手机号" class="headerlink" title="2.修改手机号"></a>2.修改手机号</h5><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">public <span class="keyword">function</span> upDateMobile()</span><br><span class="line">   &#123;</span><br><span class="line">      <span class="variable">$uid</span> = I(<span class="string">'post.uid'</span>);</span><br><span class="line">      <span class="variable">$mobiles</span> = M(<span class="string">'user'</span>)-&gt;<span class="built_in">where</span>(array(<span class="string">'uid'</span>=&gt;<span class="variable">$uid</span>))-&gt;getField(<span class="string">'codes'</span>);//国际区号</span><br><span class="line">      <span class="variable">$mobile</span>   = M(<span class="string">'user'</span>)-&gt;<span class="built_in">where</span>(array(<span class="string">'uid'</span>=&gt;<span class="variable">$uid</span>))-&gt;getField(<span class="string">'mobile'</span>);//手机号</span><br><span class="line"></span><br><span class="line">      <span class="variable">$mobile_verify</span> = I(<span class="string">'post.mobile_verify'</span>);//短信验证码</span><br><span class="line">      <span class="variable">$newMobile</span>[<span class="string">'codes'</span>] = <span class="string">'00'</span>.substr(I(<span class="string">'post.codes'</span>), 1);</span><br><span class="line">      // var_dump(<span class="variable">$newMobile</span>);<span class="built_in">exit</span>;</span><br><span class="line">      <span class="variable">$newMobile</span>[<span class="string">'mobile'</span>]  = I(<span class="string">'post.mobile'</span>);</span><br><span class="line"></span><br><span class="line">      <span class="variable">$code</span> = M(<span class="string">'code'</span>)-&gt;field(<span class="string">'end_time,verify_code'</span>)-&gt;<span class="built_in">where</span>(array(<span class="string">'key'</span>=&gt;<span class="string">'upd_'</span>.<span class="variable">$mobile</span>))-&gt;order(<span class="string">'id DESC'</span>)-&gt;find();</span><br><span class="line">      <span class="keyword">if</span>(time() - <span class="variable">$code</span>[<span class="string">'end_time'</span>] &gt; 15*60 )&#123;</span><br><span class="line">          <span class="variable">$this</span>-&gt;ajaxReturn(array(<span class="string">'msg'</span> =&gt; <span class="string">'短信验证码已失效,请重新发送'</span>, <span class="string">'status'</span> =&gt; 4));</span><br><span class="line">      &#125;</span><br><span class="line">       <span class="keyword">if</span> (<span class="variable">$mobile_verify</span> != <span class="variable">$code</span>[<span class="string">'verify_code'</span>]) &#123;</span><br><span class="line">          <span class="variable">$this</span>-&gt;ajaxReturn(array(<span class="string">'msg'</span> =&gt; <span class="string">'短信验证码错误'</span>, <span class="string">'status'</span> =&gt; 3));</span><br><span class="line">       &#125;</span><br><span class="line"></span><br><span class="line">      <span class="variable">$res</span> = M(<span class="string">'user'</span>)-&gt;<span class="built_in">where</span>(array(<span class="string">'mobile'</span>=&gt;<span class="variable">$mobile</span>,<span class="string">'codes'</span>=&gt;<span class="variable">$mobiles</span>))-&gt;save(<span class="variable">$newMobile</span>);</span><br><span class="line">      <span class="keyword">if</span>(<span class="variable">$res</span>)&#123;</span><br><span class="line">         <span class="variable">$this</span>-&gt;ajaxReturn(array(<span class="string">'msg'</span> =&gt; <span class="string">'绑定成功'</span>, <span class="string">'status'</span> =&gt; 1));</span><br><span class="line">      &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">         <span class="variable">$this</span>-&gt;ajaxReturn(array(<span class="string">'msg'</span> =&gt; <span class="string">'绑定失败,请重试'</span>, <span class="string">'status'</span> =&gt; 2));</span><br><span class="line">      &#125;</span><br><span class="line">   &#125;</span><br></pre></td></tr></table></figure>
+
       
     </div>
     
@@ -327,13 +320,13 @@ sudo mv composer.phar /usr/local/bin/composer
   
     
     <div class="copyright">
-        <p><span>本文标题:</span><a  href="/2017/03/10/composer/">composer</a></p>
+        <p><span>本文标题:</span><a  href="/2017/07/13/php-接口编写/">PHP 接口</a></p>
         <p><span>文章作者:</span><a  href="/" title="访问 angellwu 的个人博客">angellwu</a></p>
-        <p><span>发布时间:</span>2017年03月10日 - 10时13分</p>
-        <p><span>最后更新:</span>2017年03月13日 - 15时57分</p>
+        <p><span>发布时间:</span>2017年07月13日 - 10时59分</p>
+        <p><span>最后更新:</span>2018年07月13日 - 09时48分</p>
         <p>
-            <span>原始链接:</span><a class="post-url" href="/2017/03/10/composer/" title="composer">http://wuyl23.github.io/2017/03/10/composer/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://wuyl23.github.io/2017/03/10/composer/　　作者: angellwu" title=""></span>
+            <span>原始链接:</span><a class="post-url" href="/2017/07/13/php-接口编写/" title="PHP 接口">http://wuyl23.github.io/2017/07/13/php-接口编写/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://wuyl23.github.io/2017/07/13/php-接口编写/　　作者: angellwu" title=""></span>
         </p>
         <p>
             <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/cn/" title="中国大陆 (CC BY-NC-SA 3.0 CN)" target = "_blank">"署名-非商用-相同方式共享 3.0"</a> 转载请保留原文链接及作者。
@@ -344,18 +337,18 @@ sudo mv composer.phar /usr/local/bin/composer
 
 <nav id="article-nav">
   
-    <a  href="/2017/03/10/ThinkPHP/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a  href="/2018/06/25/hello-world/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption"><</strong>
       <div class="article-nav-title">
         
-          ThinkPHP
+          Hello World
         
       </div>
     </a>
   
   
-    <a  href="/2017/03/10/git/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">git</div>
+    <a  href="/2017/03/10/ubuntu-新手入门/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">ubuntu 新手入门</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
@@ -367,7 +360,7 @@ sudo mv composer.phar /usr/local/bin/composer
 
     <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Composer"><span class="toc-number">1.</span> <span class="toc-text">Composer</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Install"><span class="toc-number">1.0.1.</span> <span class="toc-text">Install</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Packagist"><span class="toc-number">1.0.2.</span> <span class="toc-text">Packagist</span></a></li></ol></li></ol></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#PHP-接口"><span class="toc-number">1.</span> <span class="toc-text">PHP 接口</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#修改绑定手机号"><span class="toc-number">1.1.</span> <span class="toc-text">修改绑定手机号</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-发送短信验证码"><span class="toc-number">1.1.1.</span> <span class="toc-text">1.发送短信验证码</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-修改手机号"><span class="toc-number">1.1.2.</span> <span class="toc-text">2.修改手机号</span></a></li></ol></li></ol></li></ol>
 </div>
 <style>
     .left-col .switch-btn {
@@ -462,13 +455,13 @@ gitment.render('git')
 
     <div class="scroll" id="post-nav-button">
         
-            <a  href="/2017/03/10/ThinkPHP/" title="上一篇: ThinkPHP">
+            <a  href="/2018/06/25/hello-world/" title="上一篇: Hello World">
                 <i class="fa fa-angle-left"></i>
             </a>
         
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
         
-            <a  href="/2017/03/10/git/" title="下一篇: git">
+            <a  href="/2017/03/10/ubuntu-新手入门/" title="下一篇: ubuntu 新手入门">
                 <i class="fa fa-angle-right"></i>
             </a>
         
