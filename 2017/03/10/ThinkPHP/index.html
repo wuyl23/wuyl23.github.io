@@ -8,15 +8,15 @@
   <link rel="dns-prefetch" href="http://wuyl23.github.io">
   <title>ThinkPHP | Hi,兄dei!</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="跳转success和error方法的第一个参数表示提示信息，第二个参数表示跳转地址，第三个参数是跳转时间（单位为秒），例如：123$this-&gt;succss(&#39;操作完成&#39;，’&#x2F;Article&#x2F;index’,3); &#x2F;&#x2F;操作完成3秒后跳转到&#x2F;Article&#x2F;index$this-&gt;error(&#39;操作失败&amp;">
+  <meta name="description" content="跳转success和error方法的第一个参数表示提示信息，第二个参数表示跳转地址，第三个参数是跳转时间（单位为秒），例如：123$this-&gt;succss(&#39;操作完成&#39;，’&#x2F;Article&#x2F;index’,3); &#x2F;&#x2F;操作完成3秒后跳转到&#x2F;Article&#x2F;index$this-&gt;error(&#39;操作失败&#39;,&#39;&#x2F;Article&#x2F;error&#39;,5); &#x2F;&#x2F;操作失败5秒后跳转到 &#x2F;Articl">
 <meta property="og:type" content="article">
 <meta property="og:title" content="ThinkPHP">
 <meta property="og:url" content="http://wuyl23.github.io/2017/03/10/ThinkPHP/index.html">
 <meta property="og:site_name" content="Hi,兄dei!">
-<meta property="og:description" content="跳转success和error方法的第一个参数表示提示信息，第二个参数表示跳转地址，第三个参数是跳转时间（单位为秒），例如：123$this-&gt;succss(&#39;操作完成&#39;，’&#x2F;Article&#x2F;index’,3); &#x2F;&#x2F;操作完成3秒后跳转到&#x2F;Article&#x2F;index$this-&gt;error(&#39;操作失败&amp;">
+<meta property="og:description" content="跳转success和error方法的第一个参数表示提示信息，第二个参数表示跳转地址，第三个参数是跳转时间（单位为秒），例如：123$this-&gt;succss(&#39;操作完成&#39;，’&#x2F;Article&#x2F;index’,3); &#x2F;&#x2F;操作完成3秒后跳转到&#x2F;Article&#x2F;index$this-&gt;error(&#39;操作失败&#39;,&#39;&#x2F;Article&#x2F;error&#39;,5); &#x2F;&#x2F;操作失败5秒后跳转到 &#x2F;Articl">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2017-03-10T06:59:11.000Z">
-<meta property="article:modified_time" content="2017-03-13T07:57:55.000Z">
+<meta property="article:modified_time" content="2020-07-28T11:33:39.986Z">
 <meta property="article:author" content="angellwu">
 <meta property="article:tag" content="php">
 <meta name="twitter:card" content="summary">
@@ -185,7 +185,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="跳转"><a href="#跳转" class="headerlink" title="跳转"></a>跳转</h3><h4 id="success和error方法的第一个参数表示提示信息，第二个参数表示跳转地址，第三个参数是跳转时间（单位为秒），例如："><a href="#success和error方法的第一个参数表示提示信息，第二个参数表示跳转地址，第三个参数是跳转时间（单位为秒），例如：" class="headerlink" title="success和error方法的第一个参数表示提示信息，第二个参数表示跳转地址，第三个参数是跳转时间（单位为秒），例如："></a>success和error方法的第一个参数表示提示信息，第二个参数表示跳转地址，第三个参数是跳转时间（单位为秒），例如：</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$this-&gt;succss(&#39;操作完成&#39;，’&#x2F;Article&#x2F;index’,3); &#x2F;&#x2F;操作完成3秒后跳转到&#x2F;Article&#x2F;index</span><br><span class="line"></span><br><span class="line">$this-&gt;error(&#39;操作失败&#39;,&#39;&#x2F;Article&#x2F;error&#39;,5); &#x2F;&#x2F;操作失败5秒后跳转到 &#x2F;Article&#x2F;error</span><br></pre></td></tr></table></figure>
+        <h3 id="跳转"><a href="#跳转" class="headerlink" title="跳转"></a>跳转</h3><h4 id="success和error方法的第一个参数表示提示信息，第二个参数表示跳转地址，第三个参数是跳转时间（单位为秒），例如："><a href="#success和error方法的第一个参数表示提示信息，第二个参数表示跳转地址，第三个参数是跳转时间（单位为秒），例如：" class="headerlink" title="success和error方法的第一个参数表示提示信息，第二个参数表示跳转地址，第三个参数是跳转时间（单位为秒），例如："></a>success和error方法的第一个参数表示提示信息，第二个参数表示跳转地址，第三个参数是跳转时间（单位为秒），例如：</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$this</span>-&gt;succss(<span class="string">'操作完成'</span>，’/Article/index’,3); //操作完成3秒后跳转到/Article/index</span><br><span class="line"></span><br><span class="line"><span class="variable">$this</span>-&gt;error(<span class="string">'操作失败'</span>,<span class="string">'/Article/error'</span>,5); //操作失败5秒后跳转到 /Article/error</span><br></pre></td></tr></table></figure>
 
 <h3 id="重定向"><a href="#重定向" class="headerlink" title="重定向"></a>重定向</h3><p>Controller类的redirect方法可以实现页面的重定向功能。<br>redirect方法的参数用法和U函数的用法一致（参考URL生成部分），例如：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">//重定向到New模块的Category操作</span><br><span class="line"><span class="variable">$this</span>-&gt;redirect(<span class="string">'New/category'</span>, array(<span class="string">'cate_id'</span> =&gt; 2), 5, <span class="string">'页面跳转中...'</span>);</span><br></pre></td></tr></table></figure>
@@ -301,18 +301,18 @@
   
 <nav id="article-nav">
   
-    <a href="/2017/03/10/LAMP-%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2017/03/10/ubuntu-%E6%96%B0%E6%89%8B%E5%85%A5%E9%97%A8/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          LAMP 环境搭建
+          ubuntu 新手入门
         
       </div>
     </a>
   
   
-    <a href="/2017/03/10/git/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">git</div>
+    <a href="/2017/03/10/linux_basic/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">linux_basic</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -482,6 +482,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">composer</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">laravel</a>
               </li>
             
             <div class="clearfix"></div>

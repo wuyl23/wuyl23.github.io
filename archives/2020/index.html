@@ -6,19 +6,15 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://wuyl23.github.io">
-  <title>git | Hi,兄dei!</title>
+  <title>Archives: 2020 | Hi,兄dei!</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Git 基础教程tig 是一款用来查看 提交日志的软件  看日记学git git - 简明指南  安装apt-get install git tig设置# 设置名称 git config --global user.name &quot;_example_&quot;  # 设置邮箱 git config --global user.email _example_@gmail.com  # 默认推">
-<meta property="og:type" content="article">
-<meta property="og:title" content="git">
-<meta property="og:url" content="http://wuyl23.github.io/2017/03/10/git/index.html">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="Hi,兄dei!">
+<meta property="og:url" content="http://wuyl23.github.io/archives/2020/index.html">
 <meta property="og:site_name" content="Hi,兄dei!">
-<meta property="og:description" content="Git 基础教程tig 是一款用来查看 提交日志的软件  看日记学git git - 简明指南  安装apt-get install git tig设置# 设置名称 git config --global user.name &quot;_example_&quot;  # 设置邮箱 git config --global user.email _example_@gmail.com  # 默认推">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2017-03-10T02:13:59.000Z">
-<meta property="article:modified_time" content="2017-03-13T07:58:11.000Z">
 <meta property="article:author" content="angellwu">
-<meta property="article:tag" content="git">
+<meta property="article:tag" content="php linux 运维">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="Hi,兄dei!" type="application/atom+xml">
@@ -165,249 +161,98 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-git" class="article article-type-post " itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
+            
   
-    <h1 class="article-title" itemprop="name">
-      git
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2020" class="archive-year">2020</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2020/06/10/laravel/" class="archive-article-date">
+  	<time datetime="2020-06-10T06:59:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-06-10</time>
+</a>
+        </div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2020/06/10/laravel/">laravel</a>
     </h1>
   
 
-        
-        <a href="/2017/03/10/git/" class="archive-article-date">
-  	<time datetime="2017-03-10T02:13:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-10</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="Git-基础教程"><a href="#Git-基础教程" class="headerlink" title="Git 基础教程"></a>Git 基础教程</h1><p>tig 是一款用来查看 提交日志的软件</p>
-<ul>
-<li><a href="http://ody0h6rio.bkt.clouddn.com/git_tutorial.pdf" target="_blank" rel="noopener">看日记学git</a></li>
-<li><a href="http://rogerdudler.github.io/git-guide/index.zh.html" target="_blank" rel="noopener">git - 简明指南</a></li>
-</ul>
-<h4 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h4><pre><code>apt-get install git tig</code></pre><h4 id="设置"><a href="#设置" class="headerlink" title="设置"></a>设置</h4><pre><code># 设置名称
-git config --global user.name &quot;_example_&quot;
-
-# 设置邮箱
-git config --global user.email _example_@gmail.com
-
-# 默认推送当前分支(Git 2.x)
-git config --global push.default simple</code></pre><h4 id="基础命令"><a href="#基础命令" class="headerlink" title="基础命令"></a>基础命令</h4><p>初始化版本库</p>
-<pre><code>git init</code></pre><p>添加到暂存区</p>
-<pre><code>git add &lt;something&gt;</code></pre><p>查看文件的修改</p>
-<pre><code>git diff &lt;something&gt;</code></pre><p>撤销文件的修改</p>
-<pre><code>git checkout &lt;file_name&gt;</code></pre><p>提交到版本库</p>
-<pre><code>git commit -m &quot;log message&quot;</code></pre><p>查看提交记录</p>
-<pre><code>git log</code></pre><p>清除未加入版本库的文件</p>
-<pre><code># -f: 清除文件
-# -d: 清除文件夹
-git clean -f -d</code></pre><p>远程仓库</p>
-<pre><code># 添加远程仓库(origin: 默认仓库)
-git remote add &lt;name&gt; &lt;url&gt;
-
-# 查看
-git remote -v
-
-# 推送(-u 本地和远程关联，首次推送需要关联)
-git push -u &lt;name&gt; &lt;branch&gt;
-
-# 获取更新
-git pull</code></pre><p>分支操作</p>
-<pre><code># 新建分支并切换
-git checkout -B &lt;new_branch_name&gt;
-
-# 查看分支
-git branch -a</code></pre><h4 id="高级命令"><a href="#高级命令" class="headerlink" title="高级命令"></a>高级命令</h4><ul>
-<li>git fetch</li>
-<li>git rebase</li>
-<li>git merge</li>
-<li>git reset</li>
-</ul>
-
-      
-
-      
-        <div class="page-reward">
-          <a href="javascript:;" class="page-reward-btn tooltip-top">
-            <div class="tooltip tooltip-east">
-            <span class="tooltip-item">
-              赏
-            </span>
-            <span class="tooltip-content">
-              <span class="tooltip-text">
-                <span class="tooltip-inner">
-                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
-                  <div class="reward-box">
-                    
-                    
-                  </div>
-                </span>
-              </span>
-            </span>
-          </div>
-          </a>
-        </div>
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
+        <div class="article-info info-on-right">
+          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">git</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">laravel</a>
         		</li>
       		
 		</ul>
 	</div>
 
-      
+          
 
-      
-
-      
-        
-<div class="share-btn share-icons tooltip-left">
-  <div class="tooltip tooltip-east">
-    <span class="tooltip-item">
-      <a href="javascript:;" class="share-sns share-outer">
-        <i class="icon icon-share"></i>
-      </a>
-    </span>
-    <span class="tooltip-content">
-      <div class="share-wrap">
-        <div class="share-icons">
-          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
-            <i class="icon icon-weibo"></i>
-          </a>
-          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
-            <i class="icon icon-weixin"></i>
-          </a>
-          <a class="qq share-sns" href="javascript:;" data-type="qq">
-            <i class="icon icon-qq"></i>
-          </a>
-          <a class="douban share-sns" href="javascript:;" data-type="douban">
-            <i class="icon icon-douban"></i>
-          </a>
-          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
-            <i class="icon icon-qzone"></i>
-          </a>
-          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
-            <i class="icon icon-facebook"></i>
-          </a>
-          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
-            <i class="icon icon-twitter"></i>
-          </a>
-          <a class="google share-sns" href="javascript:;" data-type="google">
-            <i class="icon icon-google"></i>
-          </a>
         </div>
-      </div>
-    </span>
-  </div>
-</div>
-
-<div class="page-modal wx-share js-wx-box">
-    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://wuyl23.github.io/2017/03/10/git/" alt="微信分享二维码">
-    </div>
-</div>
-
-<div class="mask js-mask"></div>
-      
-      <div class="clearfix"></div>
-    </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
   
-<nav id="article-nav">
-  
-    <a href="/2017/03/10/ThinkPHP/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          ThinkPHP
-        
-      </div>
-    </a>
-  
-  
-    <a href="/2017/03/10/linux_basic/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">linux_basic</div>
-      <i class="icon-circle-right"></i>
-    </a>
-  
-</nav>
-
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
+    
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2020/03/10/composer/" class="archive-article-date">
+  	<time datetime="2020-03-10T02:13:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-10</time>
+</a>
         </div>
-        
-        
-    </div>
-</aside>
-
-
-
+    	 
   
-  <div class="duoshuo">
-	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="git" data-title="git" data-url="http://wuyl23.github.io/2017/03/10/git/"></div>
-	<!-- 多说评论框 end -->
-	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
-	<script type="text/javascript">
-	var duoshuoQuery = {short_name:"true"};
-	(function() {
-		var ds = document.createElement('script');
-		ds.type = 'text/javascript';ds.async = true;
-		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-		ds.charset = 'UTF-8';
-		(document.getElementsByTagName('head')[0] 
-		 || document.getElementsByTagName('body')[0]).appendChild(ds);
-	})();
-	</script>
-	<!-- 多说公共JS代码 end -->
-</div>
-
-  
-  
-  
-  <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
-<script>
-  var cloudTieConfig = {
-    url: "http://wuyl23.github.io/2017/03/10/git/", 
-    sourceId: "git",
-    productKey: "true",
-    target: "cloud-tie-wrapper"
-  };
-</script>
-<script src="//img1.cache.netease.com/f2e/tie/yun/sdk/loader.js"></script>
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2020/03/10/composer/">composer</a>
+    </h1>
   
 
+        <div class="article-info info-on-right">
+          
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">composer</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+          
+
+        </div>
+        <div class="clearfix"></div>
+    </header>
+  </div>
+</article>
+  
+  
+    </div></section>
   
 
-  
-
-  
+    
 
 
           </div>
@@ -430,8 +275,8 @@ git branch -a</code></pre><h4 id="高级命令"><a href="#高级命令" class="h
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: true,
-		isArchive: false,
+		isPost: false,
+		isArchive: true,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
@@ -513,6 +358,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">composer</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">laravel</a>
               </li>
             
             <div class="clearfix"></div>

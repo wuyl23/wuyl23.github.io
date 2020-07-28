@@ -6,15 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://wuyl23.github.io">
-  <title>Archives: 2018 | Hi,兄dei!</title>
+  <title>LAMP 环境搭建 | Hi,兄dei!</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hi,兄dei!">
-<meta property="og:url" content="http://wuyl23.github.io/archives/2018/index.html">
+  <meta name="description" content="安装之前可以更新一下ubuntu软件源，确认linux处于联网状态12$ sudo vi &#x2F;etc&#x2F;apt&#x2F;source.list  &#x2F;&#x2F;输入提供软件的地址（里面有默认的地址可以用）保存退出。$ sudo apt-get update  开始安装1、安装nginx，并启动12$ sudo apt-get install nginx$ sudo &#x2F;etc&#x2F;init.d&#x2F;nginx start （或者">
+<meta property="og:type" content="article">
+<meta property="og:title" content="LAMP 环境搭建">
+<meta property="og:url" content="http://wuyl23.github.io/2019/03/10/LAMP-%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/index.html">
 <meta property="og:site_name" content="Hi,兄dei!">
+<meta property="og:description" content="安装之前可以更新一下ubuntu软件源，确认linux处于联网状态12$ sudo vi &#x2F;etc&#x2F;apt&#x2F;source.list  &#x2F;&#x2F;输入提供软件的地址（里面有默认的地址可以用）保存退出。$ sudo apt-get update  开始安装1、安装nginx，并启动12$ sudo apt-get install nginx$ sudo &#x2F;etc&#x2F;init.d&#x2F;nginx start （或者">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2019-03-10T07:50:23.000Z">
+<meta property="article:modified_time" content="2020-07-28T11:37:11.388Z">
 <meta property="article:author" content="angellwu">
-<meta property="article:tag" content="php linux 运维">
+<meta property="article:tag" content="ubuntu">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="Hi,兄dei!" type="application/atom+xml">
@@ -161,98 +165,236 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-LAMP-环境搭建" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/13/php-%E6%8E%A5%E5%8F%A3%E7%BC%96%E5%86%99/" class="archive-article-date">
-  	<time datetime="2018-07-13T02:59:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-13</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/13/php-%E6%8E%A5%E5%8F%A3%E7%BC%96%E5%86%99/">PHP 接口</a>
+    <h1 class="article-title" itemprop="name">
+      LAMP 环境搭建
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2019/03/10/LAMP-%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/" class="archive-article-date">
+  	<time datetime="2019-03-10T07:50:23.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-10</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h4 id="安装之前可以更新一下ubuntu软件源，确认linux处于联网状态"><a href="#安装之前可以更新一下ubuntu软件源，确认linux处于联网状态" class="headerlink" title="安装之前可以更新一下ubuntu软件源，确认linux处于联网状态"></a>安装之前可以更新一下ubuntu软件源，确认linux处于联网状态</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ sudo vi /etc/apt/source.list  //输入提供软件的地址（里面有默认的地址可以用）保存退出。</span><br><span class="line">$ sudo apt-get update</span><br></pre></td></tr></table></figure>
+
+<h3 id="开始安装"><a href="#开始安装" class="headerlink" title="开始安装"></a>开始安装</h3><h4 id="1、安装nginx，并启动"><a href="#1、安装nginx，并启动" class="headerlink" title="1、安装nginx，并启动"></a>1、安装nginx，并启动</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt-get install nginx</span><br><span class="line">$ sudo /etc/init.d/nginx start （或者 service nginx start）</span><br></pre></td></tr></table></figure>
+<h4 id="2、安装PHP和MySql"><a href="#2、安装PHP和MySql" class="headerlink" title="2、安装PHP和MySql"></a>2、安装PHP和MySql</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt-get install php5-cli php5-cgi mysql-server php5-mysql</span><br><span class="line">//更改数据库用户权限</span><br><span class="line">$ grant all on *.* to root@<span class="string">'%'</span> identified by <span class="string">'123456'</span></span><br><span class="line">// 刷新让权限生效</span><br><span class="line">$ flush privileges</span><br><span class="line">//修改mysql配置文件 将<span class="built_in">bind</span>-address = 127.0.0.1 注释掉，就可以远程连接数据库了</span><br><span class="line">$ sudo vi /etc/mysql/my.cnf</span><br></pre></td></tr></table></figure>
+<h4 id="3、安装php5-fpm"><a href="#3、安装php5-fpm" class="headerlink" title="3、安装php5-fpm"></a>3、安装php5-fpm</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo apt-get install php5-fpm</span><br></pre></td></tr></table></figure>
+<h4 id="4、配置nginx并重启服务"><a href="#4、配置nginx并重启服务" class="headerlink" title="4、配置nginx并重启服务"></a>4、配置nginx并重启服务</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">$ sudo vi /etc/nginx/sites-enabled，修改如下：</span><br><span class="line"></span><br><span class="line">      server&#123;</span><br><span class="line">          listen 80;</span><br><span class="line">          root /var/www;</span><br><span class="line">          index index.php index.html index.htm;</span><br><span class="line">          server_name localhost;</span><br><span class="line">          location / &#123;</span><br><span class="line">              try_files <span class="variable">$uri</span> <span class="variable">$uri</span>/ /index.html;</span><br><span class="line">          &#125;</span><br><span class="line">          location ~ \.php$ &#123;</span><br><span class="line">              fastcgi_pass 127.0.0.1:9000;</span><br><span class="line">              fastcgi_index index.php;</span><br><span class="line">              fastcgi_param SCRIPT_FILENAME /var/www<span class="variable">$fastcgi_script_name</span>;</span><br><span class="line">              include /etc/nginx/fastcgi_params;</span><br><span class="line">          &#125;</span><br><span class="line">      &#125;</span><br><span class="line">      保存退出</span><br></pre></td></tr></table></figure>
+<h4 id="5、启动fastcgi-php"><a href="#5、启动fastcgi-php" class="headerlink" title="5、启动fastcgi php"></a>5、启动fastcgi php</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo service php5-fpm start</span><br></pre></td></tr></table></figure>
+<h4 id="6、重启nginx服务"><a href="#6、重启nginx服务" class="headerlink" title="6、重启nginx服务"></a>6、重启nginx服务</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo service nginx restart</span><br></pre></td></tr></table></figure>
+<h4 id="7、安装PHP相关扩展"><a href="#7、安装PHP相关扩展" class="headerlink" title="7、安装PHP相关扩展"></a>7、安装PHP相关扩展</h4><p>如 xdebug 、memcache、 oauth等</p>
+<p>1)安装curl：sudo apt-get install php5-curl</p>
+<p>2)安装gettext：sudo apt-get install php-gettext</p>
+<p>3）安装gd库：sudo apt-get install php5-gd</p>
+<p>4）安装mcrypt：sudo apt-get install php5-mcrypt</p>
+<p>5）安装memcache</p>
+<pre><code>a)安装服务器 ：</code></pre><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">    sudo apt-get install memcached</span><br><span class="line">    $ memcached -d -m 50 -p 11211 -u root</span><br></pre></td></tr></table></figure>
+<pre><code>参数说明 -m 指定使用多少兆的缓存空间；-p 指定要监听的端口； -u 指定以哪个用户来运行
+
+b）安装php 模块：</code></pre><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">    sudo apt-get install php5-memcache</span><br></pre></td></tr></table></figure>
+
+<p>6）安装oauth：基于pecl的</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">    a）sudo apt-get install php5-dev php-pear libpcre3-dev</span><br><span class="line">       sudo pecl install oauth    (要确保有Linux系统里可以make)</span><br></pre></td></tr></table></figure>
+
+<pre><code>b）修改配置文件</code></pre><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">    sudo vi /etc/php5/fpm/php.ini</span><br></pre></td></tr></table></figure>
+
+<pre><code>在最后添加extension=oauth.so</code></pre><p>7）安装ssh2：sudo apt-get install libssh2-php</p>
+<p>8）安装xdebug：<br>    sudo apt-get install php5-xdebug</p>
+<pre><code>修改php的配置文件 sudo vi /etc/php5/fpm/php.ini 
+
+将display_errors和html_errors都改为On</code></pre><p>9)安装完上述扩展后重启PHP服务 ：sudo service php5-fpm restart</p>
+<p>现在整个环境就搭好了。</p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">php</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">ubuntu</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://wuyl23.github.io/2019/03/10/LAMP-%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/07/11/php%E5%87%BD%E6%95%B0/" class="archive-article-date">
-  	<time datetime="2018-07-11T06:59:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-07-11</time>
-</a>
+<nav id="article-nav">
+  
+    <a href="/2019/10/10/git/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          git
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2018/07/13/php-%E6%8E%A5%E5%8F%A3%E7%BC%96%E5%86%99/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">PHP 接口</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/07/11/php%E5%87%BD%E6%95%B0/">PHP 函数</a>
-    </h1>
+  <div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="LAMP-环境搭建" data-title="LAMP 环境搭建" data-url="http://wuyl23.github.io/2019/03/10/LAMP-%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"true"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+  
+  
+  
+  <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
+<script>
+  var cloudTieConfig = {
+    url: "http://wuyl23.github.io/2019/03/10/LAMP-%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/", 
+    sourceId: "LAMP-环境搭建",
+    productKey: "true",
+    target: "cloud-tie-wrapper"
+  };
+</script>
+<script src="//img1.cache.netease.com/f2e/tie/yun/sdk/loader.js"></script>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">php</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
   
 
-    
+  
+
+  
 
 
           </div>
@@ -275,8 +417,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
