@@ -184,7 +184,7 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h3 id="在windows中安装"><a href="#在windows中安装" class="headerlink" title="在windows中安装"></a>在windows中安装</h3><h4 id="安装步骤如下"><a href="#安装步骤如下" class="headerlink" title="安装步骤如下"></a>安装步骤如下</h4><p>在我的 mysql/bin 文件夹里并没有  pt-query-digest.pl 文件，并且要想在windows中支持perl文件，得先安装 perl 支持，安装方法可查看上一篇文档。接下来在 mysql/bin 文件夹下打开 git bash窗口，输入命令：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">curl -o pt-query-digest.pl https://www.percona.com/get/pt-query-digest</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -o pt-query-digest.pl https://www.percona.com/get/pt-query-digest</span><br></pre></td></tr></table></figure>
 <p>进度为100%表示下载完成，可以使用命令验证： </p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">perl pt-query-digest.pl --<span class="built_in">help</span></span><br></pre></td></tr></table></figure>
 
