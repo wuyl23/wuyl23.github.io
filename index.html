@@ -163,6 +163,198 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-pt-query-digest安装与使用" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/07/21/pt-query-digest%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/">pt-query-digest</a>
+    </h1>
+  
+
+        
+        <a href="/2021/07/21/pt-query-digest%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/" class="archive-article-date">
+  	<time datetime="2021-07-21T02:20:22.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-07-21</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="在windows中安装"><a href="#在windows中安装" class="headerlink" title="在windows中安装"></a>在windows中安装</h3><h4 id="安装步骤如下"><a href="#安装步骤如下" class="headerlink" title="安装步骤如下"></a>安装步骤如下</h4><p>在我的 mysql/bin 文件夹里并没有  pt-query-digest.pl 文件，并且要想在windows中支持perl文件，得先安装 perl 支持，安装方法可查看上一篇文档。接下来在 mysql/bin 文件夹下打开 git bash窗口，输入命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">curl -o pt-query-digest.pl https://www.percona.com/get/pt-query-digest</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://images2017.cnblogs.com/blog/858580/201710/858580-20171025135236973-210986510.png" alt="alt install finished"></p>
+<p>进度为100%表示下载完成，可以使用命令验证： </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">perl pt-query-digest.pl --<span class="built_in">help</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Usage pt-query-digest [OPTIONS] [FILES] [DSN]</span><br></pre></td></tr></table></figure>
+
+<p>具体使用方法请查看 <a href="http://www.php.cn/mysql-tutorials-357655.html" target="_blank" rel="noopener">http://www.php.cn/mysql-tutorials-357655.html</a></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">MySQL慢查询</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2021/07/21/pt-query-digest%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-Perl安装" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/07/20/Perl%E5%AE%89%E8%A3%85/">Perl</a>
+    </h1>
+  
+
+        
+        <a href="/2021/07/20/Perl%E5%AE%89%E8%A3%85/" class="archive-article-date">
+  	<time datetime="2021-07-20T07:39:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-07-20</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="Unix-和-Linux-安装-Perl"><a href="#Unix-和-Linux-安装-Perl" class="headerlink" title="Unix 和 Linux 安装 Perl"></a>Unix 和 Linux 安装 Perl</h3><h4 id="安装步骤如下"><a href="#安装步骤如下" class="headerlink" title="安装步骤如下"></a>安装步骤如下</h4><ul>
+<li><p>通过浏览器器打开 <a href="http://www.perl.org/get.html。" target="_blank" rel="noopener">http://www.perl.org/get.html。</a></p>
+</li>
+<li><p>下载适用于 Unix/Linux 的源码包。</p>
+</li>
+<li><p>下载 perl-5.x.y.tar.gz 文件后执行以下操作。</p>
+</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">$ tar -xzf perl-5.x.y.tar.gz</span><br><span class="line">$ <span class="built_in">cd</span> perl-5.x.y</span><br><span class="line">$ ./Configure -de</span><br><span class="line">$ make</span><br><span class="line">$ make <span class="built_in">test</span></span><br><span class="line">$ make install</span><br></pre></td></tr></table></figure>
+<p>接下来我们如果 perl -v 命令查看是否安装成功。</p>
+<p>安装成功后，Perl 的安装路径为 /usr/local/bin ，库安装在 /usr/local/lib/perlXX, XX 为版本号。</p>
+<h3 id="Windows-安装-Perl"><a href="#Windows-安装-Perl" class="headerlink" title="Windows 安装 Perl"></a>Windows 安装 Perl</h3><p>Perl 在 Window 平台上有 ActiveStatePerl 和 Strawberry Perl 编译器。</p>
+<p>ActiveState Perl和 Strawberry Perl最大的区别是 Strawberry Perl 里面有多包含一些 CPAN 里的模块， 所以Strawberry Perl 下载的安装文件有 80多M, 而ActiveState Perl 只有20M 左右。</p>
+<p>我们这里使用了 Strawberry Perl 。</p>
+<p>Window 系统上 Perl 安装步骤如下：</p>
+<ul>
+<li><p>Strawberry 安装包链接： <a href="http://strawberryperl.com。" target="_blank" rel="noopener">http://strawberryperl.com。</a></p>
+</li>
+<li><p>下载对应你系统的版本： 32bit 或 64bit 。</p>
+</li>
+<li><p>下载后双击打开，按安装向导一步步安装即可。</p>
+</li>
+</ul>
+<p><img src="https://www.runoob.com/wp-content/uploads/2016/06/080-sp-install-07-finish.png" alt="alt install finished"></p>
+<h3 id="Mac-OS-安装-Perl"><a href="#Mac-OS-安装-Perl" class="headerlink" title="Mac OS 安装 Perl"></a>Mac OS 安装 Perl</h3><h4 id="Mac-OS-系统一般默认已经安装了-Perl，如果未安装则执行以下步骤："><a href="#Mac-OS-系统一般默认已经安装了-Perl，如果未安装则执行以下步骤：" class="headerlink" title="Mac OS 系统一般默认已经安装了 Perl，如果未安装则执行以下步骤："></a>Mac OS 系统一般默认已经安装了 Perl，如果未安装则执行以下步骤：</h4><ul>
+<li><p>通过浏览器打开 <a href="http://www.perl.org/get.html。" target="_blank" rel="noopener">http://www.perl.org/get.html。</a></p>
+</li>
+<li><p>下载适用于 Mac OS 的源码包。</p>
+</li>
+<li><p>下载 perl-5.x.y.tar.gz 文件后执行以下操作。</p>
+</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">$ tar -xzf perl-5.x.y.tar.gz</span><br><span class="line">$ <span class="built_in">cd</span> perl-5.x.y</span><br><span class="line">$ ./Configure -de</span><br><span class="line">$ make</span><br><span class="line">$ make <span class="built_in">test</span></span><br><span class="line">$ make install</span><br></pre></td></tr></table></figure>
+
+
+
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">MySQL慢查询</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2021/07/20/Perl%E5%AE%89%E8%A3%85/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-laravel" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -892,217 +1084,6 @@ b）安装php 模块：</code></pre><figure class="highlight bash"><table><tr><t
 
 
   
-    <article id="post-linux_basic" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/03/10/linux_basic/">linux_basic</a>
-    </h1>
-  
-
-        
-        <a href="/2017/03/10/linux_basic/" class="archive-article-date">
-  	<time datetime="2017-03-10T02:13:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-10</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="linux基础命令"><a href="#linux基础命令" class="headerlink" title="linux基础命令"></a>linux基础命令</h1><h4 id="常用指令"><a href="#常用指令" class="headerlink" title="常用指令"></a>常用指令</h4><pre><code>ls            显示文件或目录   
-    -l        列出文件详细信息l(list)
-    -a        列出当前目录下所有文件及目录，包括隐藏的a(all)
-mkdir         创建目录
-    -p        创建目录，若无父目录，则创建p(parent)
-cd            切换目录
-touch         创建空文件
-echo          创建带有内容的文件
-cat           查看文件内容
-cp            拷贝
-mv            移动或重命名
-rm            删除文件
-    -r        递归删除，可删除子目录及文件
-    -f        强制删除
-find          在文件系统中搜索某个文件
-wc            统计文本中行数、字数、字符数
-grep          在文本文件中查找某个字符
-rmdir         删除空目录
-tree          树形结构显示目录，需要安装tree包
-pwd           显示当前目录
-ln            创建链接文件
-more、less    分页显示文本文件内容
-head、tail    显示文件头、尾内容
-ctrl+c        终止命令</code></pre><h4 id="系统管理命令"><a href="#系统管理命令" class="headerlink" title="系统管理命令"></a>系统管理命令</h4><pre><code>stat          显示指定文件的详细信息，比ls更详细
-who           显示在线登陆用户
-whoami        显示当前操作用户
-hostname      显示主机名
-uname         显示系统信息
-top           动态显示当前耗费资源最多的进程信息
-ps            显示瞬间进程状态ps -aux
-du            查看目录大小 du -h /home带有单位显示目录信息
-df            查看磁盘大小 df -h 带有单位显示磁盘信息
-ifconfig      查看网络情况
-ping          测试网络连通
-netstat       显示网络状态信息
-man           命令不会用了，找男人  如：man ls
-clear         清屏
-alias         重命名 如：alias showmeit=&quot;ps -aux&quot; ，另外解除使用unaliax showmeit
-kill          杀死进程，可以先用ps 或 top命令查看进程的id，然后再用kill命令杀死进程</code></pre><h4 id="打包压缩相关命令"><a href="#打包压缩相关命令" class="headerlink" title="打包压缩相关命令"></a>打包压缩相关命令</h4><pre><code>tar:          打包压缩
-    -c        归档文件
-    -x        压缩文件
-    -z        gzip压缩文件
-    -j        bzip2压缩文件
-    -v        显示压缩或解压缩过程 v(view)
-    -f        使用档名
-例：
-tar -cvf /home/abc.tar /home/abc            只打包，不压缩
-tar -zcvf /home/abc.tar.gz /home/abc        打包，并用gzip压缩
-tar -jcvf /home/abc.tar.bz2 /home/abc       打包，并用bzip2压缩
-当然，如果想解压缩，就直接替换上面的命令  tar -cvf  / tar -zcvf  / tar -jcvf 中的“c”换成“x”就可以了</code></pre><h4 id="关机-重启机器"><a href="#关机-重启机器" class="headerlink" title="关机/重启机器"></a>关机/重启机器</h4><pre><code>shutdown
-    -r        关机重启
-    -h        关机不重启
-    now       立刻关机
-halt          关机
-reboot        重启</code></pre><h4 id="vim使用"><a href="#vim使用" class="headerlink" title="vim使用"></a>vim使用</h4><pre><code>：q           退出
-：q!          强制退出
-：wq          保存并退出</code></pre><h4 id="远程下载"><a href="#远程下载" class="headerlink" title="远程下载"></a>远程下载</h4><pre><code>wget http://XXXXXXX
-curl -O http://XXXXXXX</code></pre>
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">ubuntu</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/03/10/linux_basic/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-sql" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/03/10/sql/">sql</a>
-    </h1>
-  
-
-        
-        <a href="/2017/03/10/sql/" class="archive-article-date">
-  	<time datetime="2017-03-10T02:13:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-10</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="sql语句"><a href="#sql语句" class="headerlink" title="sql语句"></a>sql语句</h1><h1 id="sql"><a href="#sql" class="headerlink" title="sql"></a>sql</h1><h3 id="数据库操作"><a href="#数据库操作" class="headerlink" title="数据库操作"></a>数据库操作</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">列出数据库</span><br><span class="line">show databases</span><br><span class="line">使用数据库</span><br><span class="line">use database_name</span><br><span class="line">创建数据库</span><br><span class="line">create database database_name</span><br><span class="line">删除数据库</span><br><span class="line">drop database_name</span><br></pre></td></tr></table></figure>
-<h3 id="表的操作"><a href="#表的操作" class="headerlink" title="表的操作"></a>表的操作</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">列出所有表</span><br><span class="line">show tables</span><br><span class="line">创建一个tab_name表</span><br><span class="line">creat table table_name(</span><br><span class="line">id int(10) not null auto_increment primary key,</span><br><span class="line">name varchar(40) not null default &quot;&quot;,</span><br><span class="line">);</span><br><span class="line">删除数据表tab_name</span><br><span class="line">drop table tab_name</span><br><span class="line">show columns from tab_name</span><br><span class="line">删除tab_name所有的数据</span><br><span class="line">delete from tab_name</span><br><span class="line">查询数据表tab_name的所有数据</span><br><span class="line">select * from tab_name</span><br></pre></td></tr></table></figure>
-<h3 id="msyql常用的查询语句"><a href="#msyql常用的查询语句" class="headerlink" title="msyql常用的查询语句"></a>msyql常用的查询语句</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">添加数据</span><br><span class="line">insert into 表名（字段1，字段2,.....） values(值1，值2);</span><br><span class="line"></span><br><span class="line">修改数据</span><br><span class="line">UPDATE 表名 SET 字段&#x3D;值;</span><br><span class="line"></span><br><span class="line">删除数据</span><br><span class="line">delete from 表名 where 条件;</span><br><span class="line"></span><br><span class="line">查询</span><br><span class="line">where</span><br><span class="line">select * from 表名 where 条件 order by  ————排序</span><br><span class="line">select * from 表名 order by 字段 desc;    #按条件进行降序排列</span><br><span class="line">select * from 表名 order by 字段 asc;     #按条件进行升序排列</span><br><span class="line"></span><br><span class="line">group by  ————分组</span><br><span class="line">select * from 表名 groud by 字段</span><br><span class="line">    having  ————过滤条件，一般用于groud by 后面</span><br><span class="line">	limit  ————查询的是某条或者某段记录</span><br><span class="line"></span><br><span class="line">select * from 表名 limit n,m   ————n表示开始位置，m表示结束位置</span><br><span class="line">	like  ————模糊查询，在一个字符型字段列中检索包含对应子串</span><br><span class="line">select * from 表名 where 字段名 like %对应值(子串)%;</span><br><span class="line">	in ————一般用于一个范围内的查找，比如查找id为212,231,232  #如：select * from 表名 where id in (212,231,232);</span><br><span class="line">	between ...and...</span><br><span class="line">select * from 表名 between ... and ...;</span><br><span class="line">	distinct  ————过滤重复</span><br><span class="line">delect distinct 字段名 from 表名;</span><br></pre></td></tr></table></figure>
-<h3 id="修改数据表的操作"><a href="#修改数据表的操作" class="headerlink" title="修改数据表的操作"></a>修改数据表的操作</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">设置表tab_name中的字段col_name为主键</span><br><span class="line">ALTER TABLE table_name ADD PRIMARY KEY(col_name)</span><br><span class="line">删除表tab_name中的字段col_name的定义主键</span><br><span class="line">ALTER TABLE table_name DROP PRIMARY KEY(col_name)</span><br><span class="line">给tab_name表添加一个字段字段名为col_name类型varchar(20)</span><br><span class="line">ALTER TABLE tab_name ADD col_name varchar(20)</span><br><span class="line">删除tab_name表col_name字段</span><br><span class="line">ALTER TABLE tab_name drop col_name</span><br><span class="line">修改表名tab_name为new_tab_name</span><br><span class="line">ALTER TABLE tab_name rename new_tab_name</span><br><span class="line">用一个已有的表来创建表old_tab_name，但不包含就表的数据tab_name</span><br><span class="line">CREATE TABLE tab_name like old_tab_name</span><br></pre></td></tr></table></figure>
-<h3 id="mysql常用的聚合函数"><a href="#mysql常用的聚合函数" class="headerlink" title="mysql常用的聚合函数"></a>mysql常用的聚合函数</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">求和：sum</span><br><span class="line">	select sum(&quot;字段名&quot;) from 表名;</span><br><span class="line">平均：avg</span><br><span class="line">	select sum(&quot;字段&quot;) from 表名;</span><br><span class="line">最大：max</span><br><span class="line">	select max(&quot;字段名&quot;) from 表名;</span><br><span class="line">最小：min</span><br><span class="line">	select min(&quot;字段名&quot;) from 表名;</span><br><span class="line">总数：count</span><br><span class="line">	select count from 表名;</span><br></pre></td></tr></table></figure>
-<h3 id="连接查询"><a href="#连接查询" class="headerlink" title="连接查询"></a>连接查询</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">inner join</span><br><span class="line">	select  a.字段名，b.字段名，... from tab1 as a inner join tab2 as a on a.id&#x3D;b.id;</span><br><span class="line">left join 左连接</span><br><span class="line">	select  a.字段名，b.字段名，... from tab1 as a left join tab2 as a on a.id&#x3D;b.id;  </span><br><span class="line">right join 有连接</span><br><span class="line">	select  a.字段名，b.字段名，... from tab1 as a right join tab2 as a on a.id&#x3D;b.id;</span><br></pre></td></tr></table></figure>
-
-
-<pre><code></code></pre>
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">php</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/03/10/sql/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &amp;raquo;</a>
@@ -1217,6 +1198,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">laravel</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">MySQL慢查询</a>
               </li>
             
             <div class="clearfix"></div>
