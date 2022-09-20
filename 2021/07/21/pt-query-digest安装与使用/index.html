@@ -15,13 +15,11 @@
 <meta property="og:site_name" content="Hi,兄dei!">
 <meta property="og:description" content="在windows中安装安装步骤如下在我的 mysql&#x2F;bin 文件夹里并没有  pt-query-digest.pl 文件，并且要想在windows中支持perl文件，得先安装 perl 支持，安装方法可查看上一篇文档。接下来在 mysql&#x2F;bin 文件夹下打开 git bash窗口，输入命令： 12curl -o pt-query-digest.pl https:&#x2F;&#x2F;www.percona.co">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://images2017.cnblogs.com/blog/858580/201710/858580-20171025135236973-210986510.png">
 <meta property="article:published_time" content="2021-07-21T02:20:22.000Z">
-<meta property="article:modified_time" content="2022-09-20T06:57:59.577Z">
+<meta property="article:modified_time" content="2022-09-20T07:44:18.785Z">
 <meta property="article:author" content="angellwu">
 <meta property="article:tag" content="MySQL慢查询">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://images2017.cnblogs.com/blog/858580/201710/858580-20171025135236973-210986510.png">
   
     <link rel="alternative" href="/atom.xml" title="Hi,兄dei!" type="application/atom+xml">
   
@@ -189,8 +187,6 @@
       
         <h3 id="在windows中安装"><a href="#在windows中安装" class="headerlink" title="在windows中安装"></a>在windows中安装</h3><h4 id="安装步骤如下"><a href="#安装步骤如下" class="headerlink" title="安装步骤如下"></a>安装步骤如下</h4><p>在我的 mysql/bin 文件夹里并没有  pt-query-digest.pl 文件，并且要想在windows中支持perl文件，得先安装 perl 支持，安装方法可查看上一篇文档。接下来在 mysql/bin 文件夹下打开 git bash窗口，输入命令：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">curl -o pt-query-digest.pl https://www.percona.com/get/pt-query-digest</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://images2017.cnblogs.com/blog/858580/201710/858580-20171025135236973-210986510.png" alt="alt install finished"></p>
 <p>进度为100%表示下载完成，可以使用命令验证： </p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">perl pt-query-digest.pl --<span class="built_in">help</span></span><br></pre></td></tr></table></figure>
 
