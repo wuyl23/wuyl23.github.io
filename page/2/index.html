@@ -173,6 +173,114 @@ var _hmt = _hmt || [];
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-ubuntu-新手入门" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/03/10/ubuntu-%E6%96%B0%E6%89%8B%E5%85%A5%E9%97%A8/">ubuntu 新手入门</a>
+    </h1>
+  
+
+        
+        <a href="/2017/03/10/ubuntu-%E6%96%B0%E6%89%8B%E5%85%A5%E9%97%A8/" class="archive-article-date">
+  	<time datetime="2017-03-10T08:43:50.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-10</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="安装系统"><a href="#安装系统" class="headerlink" title="安装系统"></a>安装系统</h1><p><img src="http://odyag87a4.bkt.clouddn.com/animation/install_ubuntu_xenial.gif" alt="安装教程"></p>
+<h1 id="终端"><a href="#终端" class="headerlink" title="终端"></a>终端</h1><p><img src="http://odyag87a4.bkt.clouddn.com/animation/ubuntu_open_terminal.gif" alt="终端教程"></p>
+<h2 id="常用快捷键"><a href="#常用快捷键" class="headerlink" title="常用快捷键"></a>常用快捷键</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">新增标签页：Ctrl + Shift + T</span><br><span class="line">关闭标签页：Ctrl + Shift + W</span><br><span class="line">复制：Ctrl + Shift + C</span><br><span class="line">粘贴：Ctrl + Shift + V</span><br></pre></td></tr></table></figure>
+<h2 id="切换到管理员"><a href="#切换到管理员" class="headerlink" title="切换到管理员"></a>切换到管理员</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo su</span><br></pre></td></tr></table></figure>
+<h1 id="修改xenial安装源-16-04"><a href="#修改xenial安装源-16-04" class="headerlink" title="修改xenial安装源 16.04"></a>修改xenial安装源 16.04</h1><h2 id="备份默认安装源"><a href="#备份默认安装源" class="headerlink" title="备份默认安装源"></a>备份默认安装源</h2> <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo mv /etc/apt/sources.list&#123;,.default&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="使用国内镜像作为安装源"><a href="#使用国内镜像作为安装源" class="headerlink" title="使用国内镜像作为安装源"></a>使用国内镜像作为安装源</h2> <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"> sudo tee /etc/apt/sources.list &lt;&lt; EOD</span><br><span class="line">deb http://cn.archive.ubuntu.com/ubuntu/ xenial main multiverse restricted universe</span><br><span class="line">deb http://cn.archive.ubuntu.com/ubuntu/ xenial-backports main multiverse restricted universe</span><br><span class="line">deb http://cn.archive.ubuntu.com/ubuntu/ xenial-proposed main multiverse restricted universe</span><br><span class="line">deb http://cn.archive.ubuntu.com/ubuntu/ xenial-security main multiverse restricted universe</span><br><span class="line">deb http://cn.archive.ubuntu.com/ubuntu/ xenial-updates main multiverse restricted universe</span><br><span class="line">deb-src http://cn.archive.ubuntu.com/ubuntu/ xenial main multiverse restricted universe</span><br><span class="line">deb-src http://cn.archive.ubuntu.com/ubuntu/ xenial-backports main multiverse restricted universe</span><br><span class="line">deb-src http://cn.archive.ubuntu.com/ubuntu/ xenial-proposed main multiverse restricted universe</span><br><span class="line">deb-src http://cn.archive.ubuntu.com/ubuntu/</span><br><span class="line"> xenial-security main multiverse restricted universe</span><br><span class="line">deb-src http://cn.archive.ubuntu.com/ubuntu/ xenial-updates main multiverse restricted universe</span><br><span class="line">EOD</span><br></pre></td></tr></table></figure>
+<h1 id="中文输入法"><a href="#中文输入法" class="headerlink" title="中文输入法"></a>中文输入法</h1><h2 id="软件安装"><a href="#软件安装" class="headerlink" title="软件安装"></a>软件安装</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install language-pack-zh-hans fcitx-rime</span><br></pre></td></tr></table></figure>
+<h2 id="设置输入法框架"><a href="#设置输入法框架" class="headerlink" title="设置输入法框架"></a>设置输入法框架</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">im-config -n fcitx</span><br><span class="line">！！！重启系统</span><br></pre></td></tr></table></figure>
+<h2 id="设置输入法"><a href="#设置输入法" class="headerlink" title="设置输入法"></a>设置输入法</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">fcitx-config-gtk3</span><br></pre></td></tr></table></figure>
+<h4 id="输入法配置"><a href="#输入法配置" class="headerlink" title="输入法配置"></a>输入法配置</h4><p><img src="http://odyag87a4.bkt.clouddn.com/images/fcitx/fcitx-config-gtk3_01.png" alt="配置图"></p>
+<h4 id="添加rime输入法"><a href="#添加rime输入法" class="headerlink" title="添加rime输入法"></a>添加rime输入法</h4><p><img src="http://odyag87a4.bkt.clouddn.com/images/fcitx/fcitx-config-gtk3_02.png" alt="添加输入法"></p>
+<h4 id="设置简体中文"><a href="#设置简体中文" class="headerlink" title="设置简体中文"></a>设置简体中文</h4><p>.Ctrl + Spqce (切换到rime输入法)<br>.Ctrl + ~（输入方案选择）<br><img src="http://odyag87a4.bkt.clouddn.com/images/fcitx/fcitx-config-gtk3_03.png" alt="设置中文"></p>
+<h4 id="添加sougou输入法"><a href="#添加sougou输入法" class="headerlink" title="添加sougou输入法"></a>添加sougou输入法</h4><ul>
+<li>基本上分三步走<br>1，添加fcitx的键盘输入法系统，因为sogou是基于fcitx的，而系统默认的是iBus；   </li>
+</ul>
+<p>2，安装sogou输入法；</p>
+<p>3，设置系统参数及一些注意点。</p>
+<h5 id="第一步、添加fcitx键盘输入法系统"><a href="#第一步、添加fcitx键盘输入法系统" class="headerlink" title="第一步、添加fcitx键盘输入法系统"></a>第一步、添加fcitx键盘输入法系统</h5><p>①先添加以下源</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo add-apt-repository ppa:fcitx-team/nightly</span><br></pre></td></tr></table></figure>
+<p>②添加源之后需要更新一下系统</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get update</span><br></pre></td></tr></table></figure>
+<p>③开始安装fcitx</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install fcitx</span><br></pre></td></tr></table></figure>
+<p>④接着安装fcitx的配置工具</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install fctix-config-gtk</span><br></pre></td></tr></table></figure>
+<p>⑤然后安装fcitx的table-all软件包</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install fctix-table-all</span><br></pre></td></tr></table></figure>
+<p>⑥安装im-switch切换工具</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install im-switch;</span><br></pre></td></tr></table></figure>
+<p>⑦ 看看我们的fcitx是否安装完成<br><img src="http://www.linuxdiyf.com/linux/uploads/allimg/160705/2-160F510092Ac.jpg" alt="查看"></p>
+<h5 id="第二步、安装sogou输入法"><a href="#第二步、安装sogou输入法" class="headerlink" title="第二步、安装sogou输入法"></a>第二步、安装sogou输入法</h5><p>①选择你操作系统的版本下载就可以了</p>
+<p>②用dpkg命令来安装搜狗输入法资源包</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo dpkg -i sougoupinyin.deb</span><br></pre></td></tr></table></figure>
+<h5 id="第三步、设置语言选项"><a href="#第三步、设置语言选项" class="headerlink" title="第三步、设置语言选项"></a>第三步、设置语言选项</h5><p>①到系统设置-&gt;语言支持，将键盘输入法系统由默认的iBus设置为fcitx<br><img src="http://www.linuxdiyf.com/linux/uploads/allimg/160705/2-160F5101012A8.jpg" alt="system setting"></p>
+<p>②这个时候是看不到效果的，一定要重启系统(非常重要的一点！！！！！！)</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">ubuntu</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/03/10/ubuntu-%E6%96%B0%E6%89%8B%E5%85%A5%E9%97%A8/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-ThinkPHP" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -686,6 +794,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">Vue</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">ThinkPHP</a>
               </li>
             
             <div class="clearfix"></div>

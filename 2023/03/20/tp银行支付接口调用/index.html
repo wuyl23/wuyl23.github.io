@@ -6,15 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://wuyl23.github.io">
-  <title>Archives: 2019 | Hi,兄dei!</title>
+  <title>银行支付接口调用 | Hi,兄dei!</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hi,兄dei!">
-<meta property="og:url" content="http://wuyl23.github.io/archives/2019/index.html">
+  <meta name="description" content="tp6 实现支付接口调用1.支付参数配置（config&#x2F;pay.php）传递参数可以使用props，传递函数可以直接在调用子组件的时候传递自定义事件，并使用$emit来调用，例如： 123456789101112  &lt;?phpreturn [    &#39;abc_bank&#39; &#x3D;&gt; [ &#x2F;&#x2F; 农业银行配置        &#39;merchant_id&#39;      &#x3D;&gt; &#39;你的商户号&#39;,">
+<meta property="og:type" content="article">
+<meta property="og:title" content="银行支付接口调用">
+<meta property="og:url" content="http://wuyl23.github.io/2023/03/20/tp%E9%93%B6%E8%A1%8C%E6%94%AF%E4%BB%98%E6%8E%A5%E5%8F%A3%E8%B0%83%E7%94%A8/index.html">
 <meta property="og:site_name" content="Hi,兄dei!">
+<meta property="og:description" content="tp6 实现支付接口调用1.支付参数配置（config&#x2F;pay.php）传递参数可以使用props，传递函数可以直接在调用子组件的时候传递自定义事件，并使用$emit来调用，例如： 123456789101112  &lt;?phpreturn [    &#39;abc_bank&#39; &#x3D;&gt; [ &#x2F;&#x2F; 农业银行配置        &#39;merchant_id&#39;      &#x3D;&gt; &#39;你的商户号&#39;,">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2023-03-20T07:09:11.000Z">
+<meta property="article:modified_time" content="2025-10-15T10:03:15.133Z">
 <meta property="article:author" content="angellwu">
-<meta property="article:tag" content="php linux 运维">
+<meta property="article:tag" content="ThinkPHP">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="Hi,兄dei!" type="application/atom+xml">
@@ -171,98 +175,220 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-tp银行支付接口调用" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/10/10/git/" class="archive-article-date">
-  	<time datetime="2019-10-10T02:13:59.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-10</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/10/10/git/">git</a>
+    <h1 class="article-title" itemprop="name">
+      银行支付接口调用
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+        
+        <a href="/2023/03/20/tp%E9%93%B6%E8%A1%8C%E6%94%AF%E4%BB%98%E6%8E%A5%E5%8F%A3%E8%B0%83%E7%94%A8/" class="archive-article-date">
+  	<time datetime="2023-03-20T07:09:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-03-20</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="tp6-实现支付接口调用"><a href="#tp6-实现支付接口调用" class="headerlink" title="tp6 实现支付接口调用"></a>tp6 实现支付接口调用</h3><h3 id="1-支付参数配置（config-pay-php）"><a href="#1-支付参数配置（config-pay-php）" class="headerlink" title="1.支付参数配置（config/pay.php）"></a>1.支付参数配置（config/pay.php）</h3><p>传递参数可以使用props，传递函数可以直接在调用子组件的时候传递自定义事件，并使用$emit来调用，例如：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">  &lt;?php</span><br><span class="line"><span class="built_in">return</span> [</span><br><span class="line">    <span class="string">'abc_bank'</span> =&gt; [ // 农业银行配置</span><br><span class="line">        <span class="string">'merchant_id'</span>      =&gt; <span class="string">'你的商户号'</span>,</span><br><span class="line">        <span class="string">'merchant_key'</span>     =&gt; <span class="string">'你的商户密钥'</span>,</span><br><span class="line">        <span class="string">'pay_url'</span>         =&gt; <span class="string">'https://gateway.abc.com/payment/api'</span>,</span><br><span class="line">        <span class="string">'notify_url'</span>      =&gt; url(<span class="string">'payment/notify'</span>, <span class="string">''</span>, <span class="literal">true</span>, <span class="literal">true</span>), // 异步回调</span><br><span class="line">        <span class="string">'return_url'</span>      =&gt; url(<span class="string">'payment/return'</span>, <span class="string">''</span>, <span class="literal">true</span>, <span class="literal">true</span>), // 同步返回</span><br><span class="line">        <span class="string">'sign_type'</span>       =&gt; <span class="string">'MD5'</span>,</span><br><span class="line">        <span class="string">'version'</span>         =&gt; <span class="string">'1.0.0'</span>,</span><br><span class="line">    ],</span><br><span class="line">];</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-支付服务类（app-common-PayService-php）"><a href="#2-支付服务类（app-common-PayService-php）" class="headerlink" title="2.支付服务类（app/common/PayService.php）"></a>2.支付服务类（app/common/PayService.php）</h3><p>首先建立一个vue实例空白页（js文件）</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php</span><br><span class="line">namespace app\common;</span><br><span class="line"></span><br><span class="line">use think\facade\Config;</span><br><span class="line"></span><br><span class="line">class PayService</span><br><span class="line">&#123;</span><br><span class="line">    protected <span class="variable">$config</span>;</span><br><span class="line">    </span><br><span class="line">    public <span class="keyword">function</span> __construct(<span class="variable">$bankType</span> = <span class="string">'abc_bank'</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="variable">$this</span>-&gt;config = Config::get(<span class="string">'pay.'</span> . <span class="variable">$bankType</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    /**</span><br><span class="line">     * 生成支付订单</span><br><span class="line">     */</span><br><span class="line">    public <span class="keyword">function</span> createPayment(<span class="variable">$orderData</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        // 1. 参数校验</span><br><span class="line">        <span class="variable">$required</span> = [<span class="string">'order_no'</span>, <span class="string">'amount'</span>, <span class="string">'subject'</span>, <span class="string">'user_id'</span>];</span><br><span class="line">        foreach (<span class="variable">$required</span> as <span class="variable">$field</span>) &#123;</span><br><span class="line">            <span class="keyword">if</span> (empty(<span class="variable">$orderData</span>[<span class="variable">$field</span>])) &#123;</span><br><span class="line">                throw new \Exception(<span class="string">"缺少必要参数: &#123;<span class="variable">$field</span>&#125;"</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        // 2. 保存订单到数据库</span><br><span class="line">        <span class="variable">$order</span> = [</span><br><span class="line">            <span class="string">'order_no'</span>    =&gt; <span class="variable">$orderData</span>[<span class="string">'order_no'</span>],</span><br><span class="line">            <span class="string">'amount'</span>      =&gt; <span class="variable">$orderData</span>[<span class="string">'amount'</span>],</span><br><span class="line">            <span class="string">'subject'</span>     =&gt; <span class="variable">$orderData</span>[<span class="string">'subject'</span>],</span><br><span class="line">            <span class="string">'user_id'</span>     =&gt; <span class="variable">$orderData</span>[<span class="string">'user_id'</span>],</span><br><span class="line">            <span class="string">'status'</span>      =&gt; <span class="string">'pending'</span>,</span><br><span class="line">            <span class="string">'create_time'</span> =&gt; time(),</span><br><span class="line">            <span class="string">'update_time'</span> =&gt; time(),</span><br><span class="line">        ];</span><br><span class="line">        </span><br><span class="line">        // 保存到orders表</span><br><span class="line">        Db::name(<span class="string">'orders'</span>)-&gt;insert(<span class="variable">$order</span>);</span><br><span class="line">        </span><br><span class="line">        // 3. 构造支付参数</span><br><span class="line">        <span class="variable">$payParams</span> = <span class="variable">$this</span>-&gt;buildPayParams(<span class="variable">$order</span>);</span><br><span class="line">        </span><br><span class="line">        // 4. 生成签名</span><br><span class="line">        <span class="variable">$payParams</span>[<span class="string">'sign'</span>] = <span class="variable">$this</span>-&gt;generateSign(<span class="variable">$payParams</span>);</span><br><span class="line">        </span><br><span class="line">        <span class="built_in">return</span> <span class="variable">$payParams</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    /**</span><br><span class="line">     * 构造支付参数</span><br><span class="line">     */</span><br><span class="line">    protected <span class="keyword">function</span> buildPayParams(<span class="variable">$order</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">return</span> [</span><br><span class="line">            <span class="string">'merchant_id'</span>   =&gt; <span class="variable">$this</span>-&gt;config[<span class="string">'merchant_id'</span>],</span><br><span class="line">            <span class="string">'out_trade_no'</span>  =&gt; <span class="variable">$order</span>[<span class="string">'order_no'</span>],</span><br><span class="line">            <span class="string">'total_amount'</span>  =&gt; <span class="variable">$this</span>-&gt;formatAmount(<span class="variable">$order</span>[<span class="string">'amount'</span>]), // 单位：分</span><br><span class="line">            <span class="string">'subject'</span>       =&gt; <span class="variable">$order</span>[<span class="string">'subject'</span>],</span><br><span class="line">            <span class="string">'timestamp'</span>     =&gt; time(),</span><br><span class="line">            <span class="string">'nonce_str'</span>     =&gt; <span class="variable">$this</span>-&gt;generateNonceStr(),</span><br><span class="line">            <span class="string">'notify_url'</span>    =&gt; <span class="variable">$this</span>-&gt;config[<span class="string">'notify_url'</span>],</span><br><span class="line">            <span class="string">'return_url'</span>    =&gt; <span class="variable">$this</span>-&gt;config[<span class="string">'return_url'</span>],</span><br><span class="line">            <span class="string">'version'</span>       =&gt; <span class="variable">$this</span>-&gt;config[<span class="string">'version'</span>],</span><br><span class="line">        ];</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    /**</span><br><span class="line">     * 生成随机字符串</span><br><span class="line">     */</span><br><span class="line">    protected <span class="keyword">function</span> generateNonceStr(<span class="variable">$length</span> = 16)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="variable">$chars</span> = <span class="string">"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"</span>;</span><br><span class="line">        <span class="variable">$str</span> = <span class="string">""</span>;</span><br><span class="line">        <span class="keyword">for</span> (<span class="variable">$i</span> = 0; <span class="variable">$i</span> &lt; <span class="variable">$length</span>; <span class="variable">$i</span>++) &#123;</span><br><span class="line">            <span class="variable">$str</span> .= substr(<span class="variable">$chars</span>, mt_rand(0, strlen(<span class="variable">$chars</span>) - 1), 1);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="built_in">return</span> <span class="variable">$str</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    /**</span><br><span class="line">     * 金额格式化（元转分）</span><br><span class="line">     */</span><br><span class="line">    protected <span class="keyword">function</span> formatAmount(<span class="variable">$amount</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">return</span> intval(floatval(<span class="variable">$amount</span>) * 100);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    /**</span><br><span class="line">     * 生成签名</span><br><span class="line">     */</span><br><span class="line">    public <span class="keyword">function</span> generateSign(<span class="variable">$data</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        // 1. 参数排序</span><br><span class="line">        ksort(<span class="variable">$data</span>);</span><br><span class="line">        </span><br><span class="line">        // 2. 拼接参数</span><br><span class="line">        <span class="variable">$string</span> = <span class="string">''</span>;</span><br><span class="line">        foreach (<span class="variable">$data</span> as <span class="variable">$key</span> =&gt; <span class="variable">$value</span>) &#123;</span><br><span class="line">            <span class="keyword">if</span> (<span class="variable">$value</span> !== <span class="string">''</span> &amp;&amp; <span class="variable">$key</span> != <span class="string">'sign'</span> &amp;&amp; !is_array(<span class="variable">$value</span>)) &#123;</span><br><span class="line">                <span class="variable">$string</span> .= <span class="variable">$key</span> . <span class="string">'='</span> . <span class="variable">$value</span> . <span class="string">'&amp;'</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        // 3. 拼接密钥</span><br><span class="line">        <span class="variable">$string</span> = rtrim(<span class="variable">$string</span>, <span class="string">'&amp;'</span>) . <span class="string">'&amp;key='</span> . <span class="variable">$this</span>-&gt;config[<span class="string">'merchant_key'</span>];</span><br><span class="line">        </span><br><span class="line">        // 4. 生成签名</span><br><span class="line">        <span class="keyword">if</span> (<span class="variable">$this</span>-&gt;config[<span class="string">'sign_type'</span>] == <span class="string">'MD5'</span>) &#123;</span><br><span class="line">            <span class="built_in">return</span> strtoupper(md5(<span class="variable">$string</span>));</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            // 其他签名方式如RSA</span><br><span class="line">            <span class="built_in">return</span> <span class="variable">$this</span>-&gt;generateRSASign(<span class="variable">$string</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    /**</span><br><span class="line">     * 验证签名</span><br><span class="line">     */</span><br><span class="line">    public <span class="keyword">function</span> verifySign(<span class="variable">$data</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">if</span> (!isset(<span class="variable">$data</span>[<span class="string">'sign'</span>])) &#123;</span><br><span class="line">            <span class="built_in">return</span> <span class="literal">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        <span class="variable">$sign</span> = <span class="variable">$data</span>[<span class="string">'sign'</span>];</span><br><span class="line">        <span class="built_in">unset</span>(<span class="variable">$data</span>[<span class="string">'sign'</span>]);</span><br><span class="line">        </span><br><span class="line">        <span class="variable">$localSign</span> = <span class="variable">$this</span>-&gt;generateSign(<span class="variable">$data</span>);</span><br><span class="line">        </span><br><span class="line">        <span class="built_in">return</span> <span class="variable">$sign</span> === <span class="variable">$localSign</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    /**</span><br><span class="line">     * 构建支付表单（自动提交）</span><br><span class="line">     */</span><br><span class="line">    public <span class="keyword">function</span> buildPayForm(<span class="variable">$payParams</span>, <span class="variable">$payUrl</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="variable">$html</span> = <span class="string">"&lt;form id='payForm' action='&#123;<span class="variable">$payUrl</span>&#125;' method='post'&gt;"</span>;</span><br><span class="line">        foreach (<span class="variable">$payParams</span> as <span class="variable">$key</span> =&gt; <span class="variable">$value</span>) &#123;</span><br><span class="line">            <span class="variable">$html</span> .= <span class="string">"&lt;input type='hidden' name='&#123;<span class="variable">$key</span>&#125;' value='&#123;<span class="variable">$value</span>&#125;' /&gt;"</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="variable">$html</span> .= <span class="string">"&lt;/form&gt;&lt;script&gt;document.getElementById('payForm').submit();&lt;/script&gt;"</span>;</span><br><span class="line">        </span><br><span class="line">        <span class="built_in">return</span> <span class="variable">$html</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="3-支付控制器（app-controller-Payment-php）"><a href="#3-支付控制器（app-controller-Payment-php）" class="headerlink" title="3.支付控制器（app/controller/Payment.php）"></a>3.支付控制器（app/controller/Payment.php）</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&lt;?php</span><br><span class="line">namespace app\controller;</span><br><span class="line"></span><br><span class="line">use app\BaseController;</span><br><span class="line">use app\common\PayService;</span><br><span class="line">use think\facade\Db;</span><br><span class="line">use think\facade\View;</span><br><span class="line"></span><br><span class="line">class Payment extends BaseController</span><br><span class="line">&#123;</span><br><span class="line">    /**</span><br><span class="line">     * 发起支付请求</span><br><span class="line">     */</span><br><span class="line">    public <span class="keyword">function</span> index()</span><br><span class="line">    &#123;</span><br><span class="line">        try &#123;</span><br><span class="line">            <span class="variable">$orderData</span> = [</span><br><span class="line">                <span class="string">'order_no'</span> =&gt; <span class="string">'ORDER_'</span> . date(<span class="string">'YmdHis'</span>) . mt_rand(1000, 9999),</span><br><span class="line">                <span class="string">'amount'</span>   =&gt; <span class="variable">$this</span>-&gt;request-&gt;param(<span class="string">'amount'</span>, 0.01),</span><br><span class="line">                <span class="string">'subject'</span>  =&gt; <span class="variable">$this</span>-&gt;request-&gt;param(<span class="string">'subject'</span>, <span class="string">'测试商品'</span>),</span><br><span class="line">                <span class="string">'user_id'</span>  =&gt; <span class="variable">$this</span>-&gt;request-&gt;param(<span class="string">'user_id'</span>, 1),</span><br><span class="line">            ];</span><br><span class="line">            </span><br><span class="line">            <span class="variable">$payService</span> = new PayService(<span class="string">'abc_bank'</span>);</span><br><span class="line">            <span class="variable">$payParams</span> = <span class="variable">$payService</span>-&gt;createPayment(<span class="variable">$orderData</span>);</span><br><span class="line">            </span><br><span class="line">            // 方式1：直接输出表单自动提交</span><br><span class="line">            <span class="built_in">return</span> <span class="variable">$payService</span>-&gt;buildPayForm(<span class="variable">$payParams</span>, <span class="variable">$this</span>-&gt;config[<span class="string">'pay_url'</span>]);</span><br><span class="line">            </span><br><span class="line">            // 方式2：返回参数给前端处理</span><br><span class="line">            // <span class="built_in">return</span> json([</span><br><span class="line">            //     <span class="string">'code'</span> =&gt; 0,</span><br><span class="line">            //     <span class="string">'data'</span> =&gt; [</span><br><span class="line">            //         <span class="string">'pay_url'</span> =&gt; <span class="variable">$this</span>-&gt;config[<span class="string">'pay_url'</span>],</span><br><span class="line">            //         <span class="string">'params'</span> =&gt; <span class="variable">$payParams</span></span><br><span class="line">            //     ]</span><br><span class="line">            // ]);</span><br><span class="line">            </span><br><span class="line">        &#125; catch (\Exception <span class="variable">$e</span>) &#123;</span><br><span class="line">            <span class="built_in">return</span> json([<span class="string">'code'</span> =&gt; 1, <span class="string">'msg'</span> =&gt; <span class="variable">$e</span>-&gt;getMessage()]);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    /**</span><br><span class="line">     * 支付异步回调（重要！）</span><br><span class="line">     * 银行服务器会POST调用这个接口</span><br><span class="line">     */</span><br><span class="line">    public <span class="keyword">function</span> notify()</span><br><span class="line">    &#123;</span><br><span class="line">        // 获取回调数据</span><br><span class="line">        <span class="variable">$postData</span> = <span class="variable">$this</span>-&gt;request-&gt;post();</span><br><span class="line">        </span><br><span class="line">        // 记录日志</span><br><span class="line">        trace(<span class="string">'支付回调数据: '</span> . json_encode(<span class="variable">$postData</span>), <span class="string">'pay'</span>);</span><br><span class="line">        </span><br><span class="line">        try &#123;</span><br><span class="line">            <span class="variable">$payService</span> = new PayService(<span class="string">'abc_bank'</span>);</span><br><span class="line">            </span><br><span class="line">            // 1. 验证签名</span><br><span class="line">            <span class="keyword">if</span> (!<span class="variable">$payService</span>-&gt;verifySign(<span class="variable">$postData</span>)) &#123;</span><br><span class="line">                throw new \Exception(<span class="string">'签名验证失败'</span>);</span><br><span class="line">            &#125;</span><br><span class="line">            </span><br><span class="line">            // 2. 查询本地订单</span><br><span class="line">            <span class="variable">$order</span> = Db::name(<span class="string">'orders'</span>)</span><br><span class="line">                      -&gt;<span class="built_in">where</span>(<span class="string">'order_no'</span>, <span class="variable">$postData</span>[<span class="string">'out_trade_no'</span>])</span><br><span class="line">                      -&gt;find();</span><br><span class="line">            </span><br><span class="line">            <span class="keyword">if</span> (!<span class="variable">$order</span>) &#123;</span><br><span class="line">                throw new \Exception(<span class="string">'订单不存在: '</span> . <span class="variable">$postData</span>[<span class="string">'out_trade_no'</span>]);</span><br><span class="line">            &#125;</span><br><span class="line">            </span><br><span class="line">            // 3. 防止重复处理</span><br><span class="line">            <span class="keyword">if</span> (<span class="variable">$order</span>[<span class="string">'status'</span>] == <span class="string">'paid'</span>) &#123;</span><br><span class="line">                <span class="built_in">return</span> <span class="string">'SUCCESS'</span>; // 已处理，直接返回成功</span><br><span class="line">            &#125;</span><br><span class="line">            </span><br><span class="line">            // 4. 验证金额</span><br><span class="line">            <span class="variable">$callbackAmount</span> = <span class="variable">$postData</span>[<span class="string">'total_amount'</span>] / 100; // 分转元</span><br><span class="line">            <span class="keyword">if</span> (abs(<span class="variable">$callbackAmount</span> - <span class="variable">$order</span>[<span class="string">'amount'</span>]) &gt; 0.01) &#123; // 允许1分误差</span><br><span class="line">                throw new \Exception(<span class="string">'金额不一致: 本地'</span> . <span class="variable">$order</span>[<span class="string">'amount'</span>] . <span class="string">', 回调'</span> . <span class="variable">$callbackAmount</span>);</span><br><span class="line">            &#125;</span><br><span class="line">            </span><br><span class="line">            // 5. 更新订单状态</span><br><span class="line">            Db::name(<span class="string">'orders'</span>)</span><br><span class="line">              -&gt;<span class="built_in">where</span>(<span class="string">'order_no'</span>, <span class="variable">$postData</span>[<span class="string">'out_trade_no'</span>])</span><br><span class="line">              -&gt;update([</span><br><span class="line">                  <span class="string">'status'</span> =&gt; <span class="string">'paid'</span>,</span><br><span class="line">                  <span class="string">'pay_time'</span> =&gt; time(),</span><br><span class="line">                  <span class="string">'transaction_id'</span> =&gt; <span class="variable">$postData</span>[<span class="string">'transaction_id'</span>],</span><br><span class="line">                  <span class="string">'update_time'</span> =&gt; time(),</span><br><span class="line">              ]);</span><br><span class="line">            </span><br><span class="line">            // 6. 处理后续业务（如发货、通知等）</span><br><span class="line">            <span class="variable">$this</span>-&gt;afterPaymentSuccess(<span class="variable">$order</span>);</span><br><span class="line">            </span><br><span class="line">            // 必须返回SUCCESS，否则银行会重复回调</span><br><span class="line">            <span class="built_in">return</span> <span class="string">'SUCCESS'</span>;</span><br><span class="line">            </span><br><span class="line">        &#125; catch (\Exception <span class="variable">$e</span>) &#123;</span><br><span class="line">            // 记录错误日志</span><br><span class="line">            trace(<span class="string">'支付回调处理失败: '</span> . <span class="variable">$e</span>-&gt;getMessage(), <span class="string">'error'</span>);</span><br><span class="line">            <span class="built_in">return</span> <span class="string">'FAIL'</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    /**</span><br><span class="line">     * 支付同步返回（用户可见）</span><br><span class="line">     */</span><br><span class="line">    public <span class="keyword">function</span> <span class="built_in">return</span>()</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="variable">$getData</span> = <span class="variable">$this</span>-&gt;request-&gt;get();</span><br><span class="line">        </span><br><span class="line">        try &#123;</span><br><span class="line">            <span class="variable">$payService</span> = new PayService(<span class="string">'abc_bank'</span>);</span><br><span class="line">            </span><br><span class="line">            <span class="keyword">if</span> (<span class="variable">$payService</span>-&gt;verifySign(<span class="variable">$getData</span>)) &#123;</span><br><span class="line">                <span class="variable">$orderNo</span> = <span class="variable">$getData</span>[<span class="string">'out_trade_no'</span>];</span><br><span class="line">                </span><br><span class="line">                // 查询订单状态</span><br><span class="line">                <span class="variable">$order</span> = Db::name(<span class="string">'orders'</span>)-&gt;<span class="built_in">where</span>(<span class="string">'order_no'</span>, <span class="variable">$orderNo</span>)-&gt;find();</span><br><span class="line">                </span><br><span class="line">                <span class="keyword">if</span> (<span class="variable">$order</span> &amp;&amp; <span class="variable">$order</span>[<span class="string">'status'</span>] == <span class="string">'paid'</span>) &#123;</span><br><span class="line">                    <span class="built_in">return</span> View::fetch(<span class="string">'pay_success'</span>, [</span><br><span class="line">                        <span class="string">'order'</span> =&gt; <span class="variable">$order</span>,</span><br><span class="line">                        <span class="string">'message'</span> =&gt; <span class="string">'支付成功'</span></span><br><span class="line">                    ]);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            </span><br><span class="line">            <span class="built_in">return</span> View::fetch(<span class="string">'pay_fail'</span>, [<span class="string">'message'</span> =&gt; <span class="string">'支付失败或验证错误'</span>]);</span><br><span class="line">            </span><br><span class="line">        &#125; catch (\Exception <span class="variable">$e</span>) &#123;</span><br><span class="line">            <span class="built_in">return</span> View::fetch(<span class="string">'pay_fail'</span>, [<span class="string">'message'</span> =&gt; <span class="variable">$e</span>-&gt;getMessage()]);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    /**</span><br><span class="line">     * 支付成功后的业务处理</span><br><span class="line">     */</span><br><span class="line">    protected <span class="keyword">function</span> afterPaymentSuccess(<span class="variable">$order</span>)</span><br><span class="line">    &#123;</span><br><span class="line">        // 1. 记录支付成功日志</span><br><span class="line">        trace(<span class="string">"订单支付成功: &#123;<span class="variable">$order</span>['order_no']&#125;"</span>, <span class="string">'pay'</span>);</span><br><span class="line">        </span><br><span class="line">        // 2. 发送邮件/短信通知</span><br><span class="line">        // <span class="variable">$this</span>-&gt;sendNotification(<span class="variable">$order</span>);</span><br><span class="line">        </span><br><span class="line">        // 3. 更新库存、发货等业务逻辑</span><br><span class="line">        // <span class="variable">$this</span>-&gt;updateInventory(<span class="variable">$order</span>);</span><br><span class="line">        </span><br><span class="line">        // 4. 其他后续处理...</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="4-数据库表结构"><a href="#4-数据库表结构" class="headerlink" title="4.数据库表结构"></a>4.数据库表结构</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">CREATE TABLE `orders` (</span><br><span class="line">  `id` int(11) NOT NULL AUTO_INCREMENT,</span><br><span class="line">  `order_no` varchar(32) NOT NULL COMMENT <span class="string">'订单号'</span>,</span><br><span class="line">  `amount` decimal(10,2) NOT NULL COMMENT <span class="string">'订单金额'</span>,</span><br><span class="line">  `subject` varchar(255) NOT NULL COMMENT <span class="string">'订单标题'</span>,</span><br><span class="line">  `user_id` int(11) NOT NULL COMMENT <span class="string">'用户ID'</span>,</span><br><span class="line">  `status` enum(<span class="string">'pending'</span>,<span class="string">'paid'</span>,<span class="string">'failed'</span>,<span class="string">'refunded'</span>) DEFAULT <span class="string">'pending'</span> COMMENT <span class="string">'订单状态'</span>,</span><br><span class="line">  `transaction_id` varchar(64) DEFAULT NULL COMMENT <span class="string">'银行交易号'</span>,</span><br><span class="line">  `create_time` int(11) DEFAULT NULL COMMENT <span class="string">'创建时间'</span>,</span><br><span class="line">  `update_time` int(11) DEFAULT NULL COMMENT <span class="string">'更新时间'</span>,</span><br><span class="line">  `pay_time` int(11) DEFAULT NULL COMMENT <span class="string">'支付时间'</span>,</span><br><span class="line">  PRIMARY KEY (`id`),</span><br><span class="line">  UNIQUE KEY `uniq_order_no` (`order_no`),</span><br><span class="line">  KEY `idx_user_id` (`user_id`),</span><br><span class="line">  KEY `idx_status` (`status`)</span><br><span class="line">) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT=<span class="string">'订单表'</span>;</span><br></pre></td></tr></table></figure>
+<h2 id="🔒-安全注意事项"><a href="#🔒-安全注意事项" class="headerlink" title="🔒 安全注意事项"></a>🔒 安全注意事项</h2><p>1.签名验证：必须验证银行回调的签名</p>
+<p>2.金额校验：回调金额必须与订单金额一致</p>
+<p>3.幂等性处理：防止重复处理同一笔回调</p>
+<p>4.日志记录：完整记录所有支付相关操作</p>
+<p>5.异常处理：妥善处理各种异常情况</p>
+<p>6.超时设置：设置合理的HTTP请求超时时间</p>
+<p>这个实现方案涵盖了支付的全流程，包括参数构造、签名生成、异步回调处理等关键环节，你可以根据具体银行的API文档进行调整。</p>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">git</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">ThinkPHP</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://wuyl23.github.io/2023/03/20/tp%E9%93%B6%E8%A1%8C%E6%94%AF%E4%BB%98%E6%8E%A5%E5%8F%A3%E8%B0%83%E7%94%A8/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/03/10/LAMP-%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/" class="archive-article-date">
-  	<time datetime="2019-03-10T07:50:23.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-03-10</time>
-</a>
+<nav id="article-nav">
+  
+    <a href="/2023/05/13/Vue-%E7%BB%84%E4%BB%B6%E7%9A%84%E9%80%9A%E4%BF%A1/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          Vue组件的通信
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2021/07/21/pt-query-digest%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">pt-query-digest</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/03/10/LAMP-%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/">LAMP 环境搭建</a>
-    </h1>
+  <div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="tp银行支付接口调用" data-title="银行支付接口调用" data-url="http://wuyl23.github.io/2023/03/20/tp%E9%93%B6%E8%A1%8C%E6%94%AF%E4%BB%98%E6%8E%A5%E5%8F%A3%E8%B0%83%E7%94%A8/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"true"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+  
+  
+  
+  <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
+<script>
+  var cloudTieConfig = {
+    url: "http://wuyl23.github.io/2023/03/20/tp%E9%93%B6%E8%A1%8C%E6%94%AF%E4%BB%98%E6%8E%A5%E5%8F%A3%E8%B0%83%E7%94%A8/", 
+    sourceId: "tp银行支付接口调用",
+    productKey: "true",
+    target: "cloud-tie-wrapper"
+  };
+</script>
+<script src="//img1.cache.netease.com/f2e/tie/yun/sdk/loader.js"></script>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">ubuntu</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
   
 
-    
+  
+
+  
 
 
           </div>
@@ -285,8 +411,8 @@ var _hmt = _hmt || [];
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
