@@ -173,6 +173,91 @@ var _hmt = _hmt || [];
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-ThinkPHP" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/03/10/ThinkPHP/">ThinkPHP</a>
+    </h1>
+  
+
+        
+        <a href="/2017/03/10/ThinkPHP/" class="archive-article-date">
+  	<time datetime="2017-03-10T06:59:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-10</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="跳转"><a href="#跳转" class="headerlink" title="跳转"></a>跳转</h3><h4 id="success和error方法的第一个参数表示提示信息，第二个参数表示跳转地址，第三个参数是跳转时间（单位为秒），例如："><a href="#success和error方法的第一个参数表示提示信息，第二个参数表示跳转地址，第三个参数是跳转时间（单位为秒），例如：" class="headerlink" title="success和error方法的第一个参数表示提示信息，第二个参数表示跳转地址，第三个参数是跳转时间（单位为秒），例如："></a>success和error方法的第一个参数表示提示信息，第二个参数表示跳转地址，第三个参数是跳转时间（单位为秒），例如：</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$this</span>-&gt;succss(<span class="string">'操作完成'</span>，’/Article/index’,3); //操作完成3秒后跳转到/Article/index</span><br><span class="line"></span><br><span class="line"><span class="variable">$this</span>-&gt;error(<span class="string">'操作失败'</span>,<span class="string">'/Article/error'</span>,5); //操作失败5秒后跳转到 /Article/error</span><br></pre></td></tr></table></figure>
+
+<h3 id="重定向"><a href="#重定向" class="headerlink" title="重定向"></a>重定向</h3><p>Controller类的redirect方法可以实现页面的重定向功能。<br>redirect方法的参数用法和U函数的用法一致（参考URL生成部分），例如：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">//重定向到New模块的Category操作</span><br><span class="line"><span class="variable">$this</span>-&gt;redirect(<span class="string">'New/category'</span>, array(<span class="string">'cate_id'</span> =&gt; 2), 5, <span class="string">'页面跳转中...'</span>);</span><br></pre></td></tr></table></figure>
+<p>上面的用法是停留5秒后跳转到New模块的category操作，并且显示页面跳转中字样，重定向后会改变当前的URL地址。<br>如果你仅仅是想重定向要一个指定的URL地址，而不是到某个模块的操作方法，可以直接使用redirect函数重定向，例如：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">//重定向到指定的URL地址</span><br><span class="line">redirect(<span class="string">'/New/category/cate_id/2'</span>, 5, <span class="string">'页面跳转中...'</span>)</span><br></pre></td></tr></table></figure>
+
+<p>更多有关thinkphp请参考：</p>
+<ul>
+<li><a href="http://document.thinkphp.cn/manual_3_2.html" target="_blank" rel="noopener">thinkphp3.2</a></li>
+<li><a href="http://www.kancloud.cn/manual/thinkphp5/118003" target="_blank" rel="noopener">thinkphp5.0</a></li>
+</ul>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">php</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/03/10/ThinkPHP/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-linux_basic" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -597,6 +682,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">laravel</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Vue</a>
               </li>
             
             <div class="clearfix"></div>

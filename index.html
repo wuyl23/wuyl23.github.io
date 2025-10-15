@@ -173,6 +173,89 @@ var _hmt = _hmt || [];
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-Vue-组件的通信" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2023/05/13/Vue-%E7%BB%84%E4%BB%B6%E7%9A%84%E9%80%9A%E4%BF%A1/">Vue组件的通信</a>
+    </h1>
+  
+
+        
+        <a href="/2023/05/13/Vue-%E7%BB%84%E4%BB%B6%E7%9A%84%E9%80%9A%E4%BF%A1/" class="archive-article-date">
+  	<time datetime="2023-05-13T02:59:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2023-05-13</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="Vue组件的通信"><a href="#Vue组件的通信" class="headerlink" title="Vue组件的通信"></a>Vue组件的通信</h3><h5 id="1-父子组件的通信"><a href="#1-父子组件的通信" class="headerlink" title="1.父子组件的通信"></a>1.父子组件的通信</h5><p>传递参数可以使用props，传递函数可以直接在调用子组件的时候传递自定义事件，并使用$emit来调用，例如：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">  //父组件</span><br><span class="line">&lt;div classs=<span class="string">"parent"</span>&gt;</span><br><span class="line">   &lt;child @getinfo=<span class="string">"myname"</span> :userinfo=<span class="string">"usermessage"</span>&gt;&lt;/child&gt;</span><br><span class="line"> &lt;div&gt;</span><br><span class="line"> <span class="built_in">export</span> default &#123;</span><br><span class="line">     <span class="function"><span class="title">data</span></span>()&#123;</span><br><span class="line">         <span class="built_in">return</span> &#123;</span><br><span class="line">             usermessage:<span class="string">'我是父亲'</span></span><br><span class="line">         &#125;</span><br><span class="line">     &#125;,</span><br><span class="line">     methods:&#123;</span><br><span class="line">         myname(name)&#123;</span><br><span class="line">             console.log(<span class="string">'我的名字叫'</span>+name)</span><br><span class="line">         &#125;</span><br><span class="line">     &#125;</span><br><span class="line"> &#125;</span><br><span class="line"> </span><br><span class="line"> </span><br><span class="line">//子组件</span><br><span class="line">&lt;div classs=<span class="string">"child"</span>&gt;</span><br><span class="line">   来源：&#123;&#123;userinfo&#125;&#125;</span><br><span class="line">   &lt;button @click=<span class="string">"getname"</span>&gt;显示我的名字&lt;/button&gt;</span><br><span class="line"> &lt;div&gt;</span><br><span class="line"> <span class="built_in">export</span> default &#123;</span><br><span class="line">     props:[<span class="string">'userinfo'</span>],</span><br><span class="line">     methods:&#123;</span><br><span class="line">         <span class="function"><span class="title">getname</span></span>()&#123;</span><br><span class="line">           this.<span class="variable">$emit</span>(<span class="string">'getinfo'</span>,<span class="string">'bilibili'</span>)</span><br><span class="line">         &#125;</span><br><span class="line">     &#125;</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
+
+<h5 id="2-兄弟组件通信"><a href="#2-兄弟组件通信" class="headerlink" title="2.兄弟组件通信"></a>2.兄弟组件通信</h5><p>首先建立一个vue实例空白页（js文件）</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">import Vue from <span class="string">'vue'</span></span><br><span class="line">  <span class="built_in">export</span> default new Vue()</span><br></pre></td></tr></table></figure>
+<p>组件a（数据发送方）通过使用 $emit 自定义事件把数据带过去</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">&lt;template&gt;</span><br><span class="line">    &lt;div&gt;</span><br><span class="line">        &lt;span&gt;A组件-&gt;&#123;&#123;msg&#125;&#125;&lt;/span&gt;</span><br><span class="line">        &lt;input <span class="built_in">type</span>=<span class="string">"button"</span> value=<span class="string">"把a组件数据传给b"</span> @click =<span class="string">"send"</span>&gt;</span><br><span class="line">    &lt;/div&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">import vmson from <span class="string">"../../../util/emptyVue"</span></span><br><span class="line"><span class="built_in">export</span> default &#123;</span><br><span class="line">    <span class="function"><span class="title">data</span></span>()&#123;</span><br><span class="line">        <span class="built_in">return</span> &#123;</span><br><span class="line">            msg:&#123;</span><br><span class="line">                a:<span class="string">'111'</span>,</span><br><span class="line">                b:<span class="string">'222'</span></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;,</span><br><span class="line">    methods:&#123;</span><br><span class="line">        send:<span class="function"><span class="title">function</span></span>()&#123;</span><br><span class="line">            vmson.<span class="variable">$emit</span>(<span class="string">"aevent"</span>,this.msg)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+<p>组件b（数据接收方）使用而通过 $on监听自定义事件的callback接收数据</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line"> &lt;div&gt;</span><br><span class="line">    &lt;span&gt;b组件,a传的的数据为-&gt;&#123;&#123;msg&#125;&#125;&lt;/span&gt;</span><br><span class="line"> &lt;/div&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line">&lt;script&gt;</span><br><span class="line">      import vmson from <span class="string">"../../../util/emptyVue"</span></span><br><span class="line">      <span class="built_in">export</span> default &#123;</span><br><span class="line">         <span class="function"><span class="title">data</span></span>()&#123;</span><br><span class="line">                <span class="built_in">return</span> &#123;</span><br><span class="line">                    msg:<span class="string">""</span></span><br><span class="line">                &#125;</span><br><span class="line">            &#125;,</span><br><span class="line">         <span class="function"><span class="title">mounted</span></span>()&#123;</span><br><span class="line">            vmson.<span class="variable">$on</span>(<span class="string">"aevent"</span>,(val)=&gt;&#123;//监听事件aevent，回调函数要使用箭头函数;</span><br><span class="line">               console.log(val);//打印结果：我是a组件的数据</span><br><span class="line">               this.msg = val;</span><br><span class="line">            &#125;)</span><br><span class="line">          &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Vue</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2023/05/13/Vue-%E7%BB%84%E4%BB%B6%E7%9A%84%E9%80%9A%E4%BF%A1/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-pt-query-digest安装与使用" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -1008,91 +1091,6 @@ b）安装php 模块：</code></pre><figure class="highlight bash"><table><tr><t
 
 
   
-    <article id="post-ThinkPHP" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/03/10/ThinkPHP/">ThinkPHP</a>
-    </h1>
-  
-
-        
-        <a href="/2017/03/10/ThinkPHP/" class="archive-article-date">
-  	<time datetime="2017-03-10T06:59:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-10</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="跳转"><a href="#跳转" class="headerlink" title="跳转"></a>跳转</h3><h4 id="success和error方法的第一个参数表示提示信息，第二个参数表示跳转地址，第三个参数是跳转时间（单位为秒），例如："><a href="#success和error方法的第一个参数表示提示信息，第二个参数表示跳转地址，第三个参数是跳转时间（单位为秒），例如：" class="headerlink" title="success和error方法的第一个参数表示提示信息，第二个参数表示跳转地址，第三个参数是跳转时间（单位为秒），例如："></a>success和error方法的第一个参数表示提示信息，第二个参数表示跳转地址，第三个参数是跳转时间（单位为秒），例如：</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$this</span>-&gt;succss(<span class="string">'操作完成'</span>，’/Article/index’,3); //操作完成3秒后跳转到/Article/index</span><br><span class="line"></span><br><span class="line"><span class="variable">$this</span>-&gt;error(<span class="string">'操作失败'</span>,<span class="string">'/Article/error'</span>,5); //操作失败5秒后跳转到 /Article/error</span><br></pre></td></tr></table></figure>
-
-<h3 id="重定向"><a href="#重定向" class="headerlink" title="重定向"></a>重定向</h3><p>Controller类的redirect方法可以实现页面的重定向功能。<br>redirect方法的参数用法和U函数的用法一致（参考URL生成部分），例如：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">//重定向到New模块的Category操作</span><br><span class="line"><span class="variable">$this</span>-&gt;redirect(<span class="string">'New/category'</span>, array(<span class="string">'cate_id'</span> =&gt; 2), 5, <span class="string">'页面跳转中...'</span>);</span><br></pre></td></tr></table></figure>
-<p>上面的用法是停留5秒后跳转到New模块的category操作，并且显示页面跳转中字样，重定向后会改变当前的URL地址。<br>如果你仅仅是想重定向要一个指定的URL地址，而不是到某个模块的操作方法，可以直接使用redirect函数重定向，例如：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">//重定向到指定的URL地址</span><br><span class="line">redirect(<span class="string">'/New/category/cate_id/2'</span>, 5, <span class="string">'页面跳转中...'</span>)</span><br></pre></td></tr></table></figure>
-
-<p>更多有关thinkphp请参考：</p>
-<ul>
-<li><a href="http://document.thinkphp.cn/manual_3_2.html" target="_blank" rel="noopener">thinkphp3.2</a></li>
-<li><a href="http://www.kancloud.cn/manual/thinkphp5/118003" target="_blank" rel="noopener">thinkphp5.0</a></li>
-</ul>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">php</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/03/10/ThinkPHP/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &amp;raquo;</a>
@@ -1211,6 +1209,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">laravel</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Vue</a>
               </li>
             
             <div class="clearfix"></div>
