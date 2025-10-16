@@ -6,19 +6,15 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://wuyl23.github.io">
-  <title>pt-query-digest | Hi,兄dei!</title>
+  <title>Archives: 2024/4 | Hi,兄dei!</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="在windows中安装安装步骤如下在我的 mysql&#x2F;bin 文件夹里并没有  pt-query-digest.pl 文件，并且要想在windows中支持perl文件，得先安装 perl 支持，安装方法可查看上一篇文档。接下来在 mysql&#x2F;bin 文件夹下打开 git bash窗口，输入命令： 1curl -o pt-query-digest.pl https:&#x2F;&#x2F;www.percona.com">
-<meta property="og:type" content="article">
-<meta property="og:title" content="pt-query-digest">
-<meta property="og:url" content="http://wuyl23.github.io/2021/07/21/pt-query-digest%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/index.html">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="Hi,兄dei!">
+<meta property="og:url" content="http://wuyl23.github.io/archives/2024/04/index.html">
 <meta property="og:site_name" content="Hi,兄dei!">
-<meta property="og:description" content="在windows中安装安装步骤如下在我的 mysql&#x2F;bin 文件夹里并没有  pt-query-digest.pl 文件，并且要想在windows中支持perl文件，得先安装 perl 支持，安装方法可查看上一篇文档。接下来在 mysql&#x2F;bin 文件夹下打开 git bash窗口，输入命令： 1curl -o pt-query-digest.pl https:&#x2F;&#x2F;www.percona.com">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2021-07-21T02:20:22.000Z">
-<meta property="article:modified_time" content="2022-09-26T07:14:20.000Z">
 <meta property="article:author" content="angellwu">
-<meta property="article:tag" content="MySQL慢查询">
+<meta property="article:tag" content="php linux 运维">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="Hi,兄dei!" type="application/atom+xml">
@@ -175,215 +171,60 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-pt-query-digest安装与使用" class="article article-type-post " itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
+            
   
-    <h1 class="article-title" itemprop="name">
-      pt-query-digest
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2024" class="archive-year">2024</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2024/04/12/Thinkphp8%E9%83%A8%E7%BD%B2/" class="archive-article-date">
+  	<time datetime="2024-04-12T08:05:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2024-04-12</time>
+</a>
+        </div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2024/04/12/Thinkphp8%E9%83%A8%E7%BD%B2/">ThinkPHP8部署</a>
     </h1>
   
 
-        
-        <a href="/2021/07/21/pt-query-digest%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/" class="archive-article-date">
-  	<time datetime="2021-07-21T02:20:22.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-07-21</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="在windows中安装"><a href="#在windows中安装" class="headerlink" title="在windows中安装"></a>在windows中安装</h3><h4 id="安装步骤如下"><a href="#安装步骤如下" class="headerlink" title="安装步骤如下"></a>安装步骤如下</h4><p>在我的 mysql/bin 文件夹里并没有  pt-query-digest.pl 文件，并且要想在windows中支持perl文件，得先安装 perl 支持，安装方法可查看上一篇文档。接下来在 mysql/bin 文件夹下打开 git bash窗口，输入命令：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -o pt-query-digest.pl https://www.percona.com/get/pt-query-digest</span><br></pre></td></tr></table></figure>
-<p>进度为100%表示下载完成，可以使用命令验证： </p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">perl pt-query-digest.pl --<span class="built_in">help</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Usage pt-query-digest [OPTIONS] [FILES] [DSN]</span><br></pre></td></tr></table></figure>
-
-
-<p>具体的使用方法请查看 <a href="http://www.php.cn/mysql-tutorials-357655.html" target="_blank" rel="noopener">http://www.php.cn/mysql-tutorials-357655.html</a></p>
-
-      
-
-      
-        <div class="page-reward">
-          <a href="javascript:;" class="page-reward-btn tooltip-top">
-            <div class="tooltip tooltip-east">
-            <span class="tooltip-item">
-              赏
-            </span>
-            <span class="tooltip-content">
-              <span class="tooltip-text">
-                <span class="tooltip-inner">
-                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
-                  <div class="reward-box">
-                    
-                    
-                  </div>
-                </span>
-              </span>
-            </span>
-          </div>
-          </a>
-        </div>
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
+        <div class="article-info info-on-right">
+          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">MySQL慢查询</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">thinkphp</a>
         		</li>
       		
 		</ul>
 	</div>
 
-      
+          
 
-      
-
-      
-        
-<div class="share-btn share-icons tooltip-left">
-  <div class="tooltip tooltip-east">
-    <span class="tooltip-item">
-      <a href="javascript:;" class="share-sns share-outer">
-        <i class="icon icon-share"></i>
-      </a>
-    </span>
-    <span class="tooltip-content">
-      <div class="share-wrap">
-        <div class="share-icons">
-          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
-            <i class="icon icon-weibo"></i>
-          </a>
-          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
-            <i class="icon icon-weixin"></i>
-          </a>
-          <a class="qq share-sns" href="javascript:;" data-type="qq">
-            <i class="icon icon-qq"></i>
-          </a>
-          <a class="douban share-sns" href="javascript:;" data-type="douban">
-            <i class="icon icon-douban"></i>
-          </a>
-          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
-            <i class="icon icon-qzone"></i>
-          </a>
-          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
-            <i class="icon icon-facebook"></i>
-          </a>
-          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
-            <i class="icon icon-twitter"></i>
-          </a>
-          <a class="google share-sns" href="javascript:;" data-type="google">
-            <i class="icon icon-google"></i>
-          </a>
         </div>
-      </div>
-    </span>
-  </div>
-</div>
-
-<div class="page-modal wx-share js-wx-box">
-    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://wuyl23.github.io/2021/07/21/pt-query-digest%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/" alt="微信分享二维码">
-    </div>
-</div>
-
-<div class="mask js-mask"></div>
-      
-      <div class="clearfix"></div>
-    </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-  
-<nav id="article-nav">
-  
-    <a href="/2023/03/20/tp%E9%93%B6%E8%A1%8C%E6%94%AF%E4%BB%98%E6%8E%A5%E5%8F%A3%E8%B0%83%E7%94%A8/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          银行支付接口调用
-        
-      </div>
-    </a>
   
   
-    <a href="/2021/07/20/Perl%E5%AE%89%E8%A3%85/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Perl</div>
-      <i class="icon-circle-right"></i>
-    </a>
-  
-</nav>
-
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-  
-  <div class="duoshuo">
-	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="pt-query-digest安装与使用" data-title="pt-query-digest" data-url="http://wuyl23.github.io/2021/07/21/pt-query-digest%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/"></div>
-	<!-- 多说评论框 end -->
-	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
-	<script type="text/javascript">
-	var duoshuoQuery = {short_name:"true"};
-	(function() {
-		var ds = document.createElement('script');
-		ds.type = 'text/javascript';ds.async = true;
-		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-		ds.charset = 'UTF-8';
-		(document.getElementsByTagName('head')[0] 
-		 || document.getElementsByTagName('body')[0]).appendChild(ds);
-	})();
-	</script>
-	<!-- 多说公共JS代码 end -->
-</div>
-
-  
-  
-  
-  <div id="cloud-tie-wrapper" class="cloud-tie-wrapper"></div>
-<script>
-  var cloudTieConfig = {
-    url: "http://wuyl23.github.io/2021/07/21/pt-query-digest%E5%AE%89%E8%A3%85%E4%B8%8E%E4%BD%BF%E7%94%A8/", 
-    sourceId: "pt-query-digest安装与使用",
-    productKey: "true",
-    target: "cloud-tie-wrapper"
-  };
-</script>
-<script src="//img1.cache.netease.com/f2e/tie/yun/sdk/loader.js"></script>
+    </div></section>
   
 
-  
-
-  
-
-  
+    
 
 
           </div>
@@ -406,8 +247,8 @@ var _hmt = _hmt || [];
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: true,
-		isArchive: false,
+		isPost: false,
+		isArchive: true,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
